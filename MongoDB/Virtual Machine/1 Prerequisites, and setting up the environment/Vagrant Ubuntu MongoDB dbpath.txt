@@ -1,0 +1,155 @@
+# Vagrant Ubuntu MongoDB dbpath
+$ ls /var/lib/mongodb
+
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo ls -la /root
+total 124
+drwx------  4 root root  4096 Mar 23 10:10 .
+drwxr-xr-x 23 root root  4096 Mar 23 11:59 ..
+-rw-r--r--  1 root root  3106 Feb 20  2014 .bashrc
+-rw-r--r--  1 root root 98605 Apr  7  2015 eva.csv
+drwxr-xr-x  2 root root  4096 Mar 23 10:10 .oracle_jre_usage
+-rw-r--r--  1 root root   140 Feb 20  2014 .profile
+drwx------  2 root root  4096 Mar 23 09:39 .ssh
+vagrant@vagrant-ubuntu-trusty-64:~$ ls /etc
+acpi                    chef            environment       init             localtime       newt                     python2.7         securetty    ucf.conf
+adduser.conf            cloud           fonts             init.d           logcheck        nologin                  python3           security     udev
+adjtime                 colord.conf     fstab             initramfs-tools  login.defs      nsswitch.conf            python3.4         selinux      ufw
+alternatives            console-setup   fstab.d           inputrc          logrotate.conf  opt                      rc0.d             services     updatedb.conf
+apm                     cron.d          fuse.conf         insserv          logrotate.d     os-release               rc1.d             sgml         update-manager
+apparmor                cron.daily      gai.conf          insserv.conf     lsb-release     overlayroot.conf         rc2.d             shadow       update-motd.d
+apparmor.d              cron.hourly     ghostscript       insserv.conf.d   ltrace.conf     overlayroot.local.conf   rc3.d             shadow-      update-notifier
+apport                  cron.monthly    groff             iproute2         magic           pam.conf                 rc4.d             shells       upstart-xsessions
+apt                     crontab         group             issue            magic.mime      pam.d                    rc5.d             skel         vagrant_provisioned_at
+at.deny                 cron.weekly     group-            issue.net        mailcap         passwd                   rc6.d             ssh          vim
+at-spi2                 crypttab        grub.d            java-8-oracle    mailcap.order   passwd-                  rc.local          ssl          vmware-tools
+bash.bashrc             dbus-1          gshadow           kbd              manpath.config  perl                     rcS.d             subgid       vtrgb
+bash_completion         debconf.conf    gshadow-          kernel           mime.types      pm                       request-key.conf  subgid-      w3m
+bash_completion.d       debian_version  gssapi_mech.conf  kernel-img.conf  mke2fs.conf     polkit-1                 request-key.d     subuid       wgetrc
+bindresvport.blacklist  default         gtk-3.0           landscape        modprobe.d      pollinate                resolvconf        subuid-      X11
+blkid.conf              deluser.conf    hdparm.conf       ldap             modules         popularity-contest.conf  resolv.conf       sudoers      xdg
+blkid.tab               depmod.d        host.conf         ld.so.cache      mongod.conf     ppp                      rmt               sudoers.d    xml
+byobu                   dhcp            hostname          ld.so.conf       mtab            profile                  rpc               sysctl.conf  zsh_command_not_found
+ca-certificates         dkms            hosts             ld.so.conf.d     nanorc          profile.d                rsyslog.conf      sysctl.d
+ca-certificates.conf    dpkg            hosts.allow       legal            netconfig       protocols                rsyslog.d         systemd
+calendar                drirc           hosts.deny        libaudit.conf    network         puppet                   sane.d            terminfo
+chatscripts             ec2_version     idmapd.conf       locale.alias     networks        python                   screenrc          timezone
+vagrant@vagrant-ubuntu-trusty-64:~$ cat /etc/mongod.conf
+# mongod.conf
+
+# for documentation of all options, see:
+#   http://docs.mongodb.org/manual/reference/configuration-options/
+
+# Where and how to store data.
+storage:
+  dbPath: /var/lib/mongodb
+  journal:
+    enabled: true
+#  engine:
+#  mmapv1:
+#  wiredTiger:
+
+# where to write logging data.
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+
+# network interfaces
+net:
+  port: 27017
+  bindIp: 127.0.0.1
+
+
+#processManagement:
+
+#security:
+
+#operationProfiling:
+
+#replication:
+
+#sharding:
+
+## Enterprise-Only Options:
+
+#auditLog:
+
+#snmp:
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo ls -la /root
+total 124
+drwx------  4 root root  4096 Mar 23 10:10 .
+drwxr-xr-x 23 root root  4096 Mar 23 11:59 ..
+-rw-r--r--  1 root root  3106 Feb 20  2014 .bashrc
+-rw-r--r--  1 root root 98605 Apr  7  2015 eva.csv
+drwxr-xr-x  2 root root  4096 Mar 23 10:10 .oracle_jre_usage
+-rw-r--r--  1 root root   140 Feb 20  2014 .profile
+drwx------  2 root root  4096 Mar 23 09:39 .ssh
+vagrant@vagrant-ubuntu-trusty-64:~$ ls /etc
+acpi                    chef            environment       init             localtime       newt                     python2.7         securetty    ucf.conf
+adduser.conf            cloud           fonts             init.d           logcheck        nologin                  python3           security     udev
+adjtime                 colord.conf     fstab             initramfs-tools  login.defs      nsswitch.conf            python3.4         selinux      ufw
+alternatives            console-setup   fstab.d           inputrc          logrotate.conf  opt                      rc0.d             services     updatedb.conf
+apm                     cron.d          fuse.conf         insserv          logrotate.d     os-release               rc1.d             sgml         update-manager
+apparmor                cron.daily      gai.conf          insserv.conf     lsb-release     overlayroot.conf         rc2.d             shadow       update-motd.d
+apparmor.d              cron.hourly     ghostscript       insserv.conf.d   ltrace.conf     overlayroot.local.conf   rc3.d             shadow-      update-notifier
+apport                  cron.monthly    groff             iproute2         magic           pam.conf                 rc4.d             shells       upstart-xsessions
+apt                     crontab         group             issue            magic.mime      pam.d                    rc5.d             skel         vagrant_provisioned_at
+at.deny                 cron.weekly     group-            issue.net        mailcap         passwd                   rc6.d             ssh          vim
+at-spi2                 crypttab        grub.d            java-8-oracle    mailcap.order   passwd-                  rc.local          ssl          vmware-tools
+bash.bashrc             dbus-1          gshadow           kbd              manpath.config  perl                     rcS.d             subgid       vtrgb
+bash_completion         debconf.conf    gshadow-          kernel           mime.types      pm                       request-key.conf  subgid-      w3m
+bash_completion.d       debian_version  gssapi_mech.conf  kernel-img.conf  mke2fs.conf     polkit-1                 request-key.d     subuid       wgetrc
+bindresvport.blacklist  default         gtk-3.0           landscape        modprobe.d      pollinate                resolvconf        subuid-      X11
+blkid.conf              deluser.conf    hdparm.conf       ldap             modules         popularity-contest.conf  resolv.conf       sudoers      xdg
+blkid.tab               depmod.d        host.conf         ld.so.cache      mongod.conf     ppp                      rmt               sudoers.d    xml
+byobu                   dhcp            hostname          ld.so.conf       mtab            profile                  rpc               sysctl.conf  zsh_command_not_found
+ca-certificates         dkms            hosts             ld.so.conf.d     nanorc          profile.d                rsyslog.conf      sysctl.d
+ca-certificates.conf    dpkg            hosts.allow       legal            netconfig       protocols                rsyslog.d         systemd
+calendar                drirc           hosts.deny        libaudit.conf    network         puppet                   sane.d            terminfo
+chatscripts             ec2_version     idmapd.conf       locale.alias     networks        python                   screenrc          timezone
+vagrant@vagrant-ubuntu-trusty-64:~$ cat /etc/mongod.conf
+# mongod.conf
+
+# for documentation of all options, see:
+#   http://docs.mongodb.org/manual/reference/configuration-options/
+
+# Where and how to store data.
+storage:
+  dbPath: /var/lib/mongodb
+  journal:
+    enabled: true
+#  engine:
+#  mmapv1:
+#  wiredTiger:
+
+# where to write logging data.
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+
+# network interfaces
+net:
+  port: 27017
+  bindIp: 127.0.0.1
+
+
+#processManagement:
+
+#security:
+
+#operationProfiling:
+
+#replication:
+
+#sharding:
+
+## Enterprise-Only Options:
+
+#auditLog:
+
+#snmp:
+vagrant@vagrant-ubuntu-trusty-64:~$ ls /var/lib/mongodb
+collection-0--8745635797298899082.wt  diagnostic.data                  index-3--8745635797298899082.wt  _mdb_catalog.wt  sizeStorer.wt  WiredTiger        WiredTiger.lock    WiredTiger.wt
+collection-2--8745635797298899082.wt  index-1--8745635797298899082.wt  journal                          mongod.lock      storage.bson   WiredTigerLAS.wt  WiredTiger.turtle
+vagrant@vagrant-ubuntu-trusty-64:~$

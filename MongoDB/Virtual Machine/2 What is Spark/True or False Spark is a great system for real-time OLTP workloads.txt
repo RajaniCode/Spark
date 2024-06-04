@@ -1,0 +1,10 @@
+Spark is a great system for real-time OLTP workloads
+
+Choose the best answer:
+
+[Single Answer]
+
+True
+False
+
+Answer: False

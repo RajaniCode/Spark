@@ -1,0 +1,10 @@
+Which $match operation selects EVA logs where Buzz Aldrin was a member of the crew?
+
+Choose the best answer:
+
+[Single Answer]
+
+{ $match: { Crew: /Buzz Aldrin/} }
+{ $match: { "EVA #": { $gte: 30 } } }
+
+Answer: { $match: { Crew: /Buzz Aldrin/} }

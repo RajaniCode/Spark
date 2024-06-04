@@ -1,0 +1,10 @@
+Spark guarantees that your processing tasks completes in subseconds
+
+Choose the best answer:
+
+[Single Answer]
+
+True
+False
+
+Answer: False

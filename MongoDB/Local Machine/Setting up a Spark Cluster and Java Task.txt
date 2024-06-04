@@ -1,0 +1,36 @@
+# Master
+> e:
+> cd "E:\Working\MongoDB\Spark\spark-1.6.1\bin"
+# OR
+> cd "E:\Working\MongoDB\Spark\spark-1.6.1-bin-hadoop2.6\bin"
+> spark-class org.apache.spark.deploy.master.Master
+
+http://localhost:8080/
+Spark Master at spark://192.168.56.1:7077
+
+
+# Worker 
+> e:
+> cd "E:\Working\MongoDB\Spark\spark-1.6.1\bin"
+# OR
+> cd "E:\Working\MongoDB\Spark\spark-1.6.1-bin-hadoop2.6\bin"
+> spark-class org.apache.spark.deploy.worker.Worker spark://192.168.56.1:7077
+
+http://localhost:8080/
+Spark Master at spark://192.168.56.1:7077
+Workers
+Worker Id					Address			State		Cores		Memory
+worker-20170327211407-192.168.56.1-52358	192.168.56.1:52358	ALIVE		4 (0 Used)	2.8 GB (0.0 B Used)
+
+
+# Java Task
+> e:
+> cd "E:\Working\MongoDB\Spark\spark-1.6.1\bin"
+# OR
+> cd "E:\Working\MongoDB\Spark\spark-1.6.1-bin-hadoop2.6\bin"
+> spark-submit --class spacewalk.SpaceWalk --master spark://192.168.56.1:7077 "E:\Working\MongoDB\Spark\MongoDB_Spark_Course\build\libs\SparkCourse-1.0.0-SNAPSHOT.jar"
+
+# After Writing the RDDs to MongoDB
+[
+$ db.astronautTotals.find().pretty()
+]

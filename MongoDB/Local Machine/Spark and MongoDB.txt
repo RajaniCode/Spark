@@ -1,0 +1,47 @@
+
+# Git Bash # java # mongod
+
+$ java -version
+
+$ cd "E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment\Local"
+
+$ wget -q http://d3kbcqa49mib13.cloudfront.net/spark-1.6.1-bin-hadoop2.6.tgz -O spark-1.6.1.tgz
+
+$ tar -xzf spark-1.6.1.tgz && mv spark-1.6.1-bin-hadoop2.6 spark-1.6.1
+
+[
+$ chown -R vagrant:vagrant spark-1.6.1
+]
+
+
+$ git clone https://github.com/breinero/MongoDB_Spark_Course.git
+
+[
+$ sudo chown -R vagrant:vagrant MongoDB_Spark_Course
+]
+
+$ cd MongoDB_Spark_Course
+
+[
+$ chmod 755 gradlew*
+]
+
+$ ./gradlew jar
+
+$ jar tvf build/libs/SparkCourse-1.0.0-SNAPSHOT.jar
+
+[Ctrl + c]
+
+$ cd ..
+
+$ mongod --version
+
+$ wget https://data.nasa.gov/api/views/9kcy-zwvn/rows.csv?accessType=DOWNLOAD -O eva.csv
+
+$ mkdir -p WT
+
+$ mongod -dbpath WT --storageEngine wiredTiger
+
+# Git Bash # mongoimport # mongo
+
+$ mongoimport --headerline --file eva.csv --type csv --db nasa --collection eva

@@ -1,0 +1,11 @@
+The spark connector's write target can be set in the same three ways as the read configuration. Two are at the prompt (programatically) and in the spark defaults conf file. What is the third?
+
+Choose the best answer:
+
+[Single Answer]
+
+via the Postal Service
+through a remote procedure call
+command line parameter
+
+Answer: command line parameter

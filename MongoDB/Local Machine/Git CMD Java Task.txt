@@ -1,0 +1,390 @@
+C:\Users\Aspire>java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+C:\Users\Aspire>mongod --version
+db version v3.2.8
+git version: ed70e33130c977bda0024c125b56d159573dbaf0
+OpenSSL version: OpenSSL 1.0.1p-fips 9 Jul 2015
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: 2008plus-ssl
+    distarch: x86_64
+    target_arch: x86_64
+
+C:\Users\Aspire>e:
+
+E:\>cd "E:\Working\MongoDB\Spark\spark-1.6.1\bin"
+
+E:\Working\MongoDB\Spark\spark-1.6.1\bin>ls
+beeline      load-spark-env.cmd  pyspark       run-example       spark-class       spark-shell       spark-sql         spark-submit2.cmd  sparkR2.cmd
+beeline.cmd  load-spark-env.sh   pyspark.cmd   run-example.cmd   spark-class.cmd   spark-shell.cmd   spark-submit      sparkR
+derby.log    metastore_db        pyspark2.cmd  run-example2.cmd  spark-class2.cmd  spark-shell2.cmd  spark-submit.cmd  sparkR.cmd
+
+E:\Working\MongoDB\Spark\spark-1.6.1\bin>spark-submit --class spacewalk.SpaceWalk --master spark://192.168.56.1:7077 "E:\Working\MongoDB\Spark\MongoDB_Spark_Course\build\libs\Spark
+Course-1.0.0-SNAPSHOT.jar"
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/03/27 21:27:05 INFO SparkContext: Running Spark version 1.6.1
+17/03/27 21:27:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/03/27 21:27:06 INFO SecurityManager: Changing view acls to: Aspire
+17/03/27 21:27:06 INFO SecurityManager: Changing modify acls to: Aspire
+17/03/27 21:27:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Aspire); users with modify permissions: Set(Asp
+ire)
+17/03/27 21:27:07 INFO Utils: Successfully started service 'sparkDriver' on port 52404.
+17/03/27 21:27:08 INFO Slf4jLogger: Slf4jLogger started
+17/03/27 21:27:08 INFO Remoting: Starting remoting
+17/03/27 21:27:09 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.56.1:52417]
+17/03/27 21:27:09 INFO Utils: Successfully started service 'sparkDriverActorSystem' on port 52417.
+17/03/27 21:27:09 INFO SparkEnv: Registering MapOutputTracker
+17/03/27 21:27:09 INFO SparkEnv: Registering BlockManagerMaster
+17/03/27 21:27:09 INFO DiskBlockManager: Created local directory at C:\Users\Aspire\AppData\Local\Temp\blockmgr-499a98b4-eded-4eb9-950c-3542c9bd9643
+17/03/27 21:27:09 INFO MemoryStore: MemoryStore started with capacity 511.1 MB
+17/03/27 21:27:09 INFO SparkEnv: Registering OutputCommitCoordinator
+17/03/27 21:27:09 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+17/03/27 21:27:09 INFO SparkUI: Started SparkUI at http://192.168.56.1:4040
+17/03/27 21:27:09 INFO HttpFileServer: HTTP File server directory is C:\Users\Aspire\AppData\Local\Temp\spark-6468ad8c-2075-4c56-b7af-ab2e5b4f81e6\httpd-2fd78021-8f82-4b55-9fa5-cda
+6ba06e20b
+17/03/27 21:27:09 INFO HttpServer: Starting HTTP Server
+17/03/27 21:27:09 INFO Utils: Successfully started service 'HTTP file server' on port 52420.
+17/03/27 21:27:21 INFO SparkContext: Added JAR file:/E:/Working/MongoDB/Spark/MongoDB_Spark_Course/build/libs/SparkCourse-1.0.0-SNAPSHOT.jar at http://192.168.56.1:52420/jars/Spark
+Course-1.0.0-SNAPSHOT.jar with timestamp 1490630241708
+17/03/27 21:27:21 INFO Executor: Starting executor ID driver on host localhost
+17/03/27 21:27:21 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 52425.
+17/03/27 21:27:21 INFO NettyBlockTransferService: Server created on 52425
+17/03/27 21:27:21 INFO BlockManagerMaster: Trying to register BlockManager
+17/03/27 21:27:21 INFO BlockManagerMasterEndpoint: Registering block manager localhost:52425 with 511.1 MB RAM, BlockManagerId(driver, localhost, 52425)
+17/03/27 21:27:21 INFO BlockManagerMaster: Registered BlockManager
+17/03/27 21:27:24 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 200.0 B, free 200.0 B)
+17/03/27 21:27:24 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 377.0 B, free 577.0 B)
+17/03/27 21:27:24 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:52425 (size: 377.0 B, free: 511.1 MB)
+17/03/27 21:27:24 INFO SparkContext: Created broadcast 0 from broadcast at MongoRDD.scala:145
+17/03/27 21:27:25 INFO cluster: Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueS
+ize=500}
+17/03/27 21:27:25 INFO cluster: Adding discovered server 127.0.0.1:27017 to client view of cluster
+17/03/27 21:27:25 INFO cluster: Cluster description not yet available. Waiting for 30000 ms before timing out
+17/03/27 21:27:25 INFO connection: Opened connection [connectionId{localValue:1, serverValue:3}] to 127.0.0.1:27017
+17/03/27 21:27:25 INFO cluster: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=tru
+e, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=1395805}
+17/03/27 21:27:25 INFO cluster: Discovered cluster type of STANDALONE
+17/03/27 21:27:25 INFO MongoClientCache: Creating MongoClient: [127.0.0.1:27017]
+17/03/27 21:27:25 INFO connection: Opened connection [connectionId{localValue:2, serverValue:4}] to 127.0.0.1:27017
+17/03/27 21:27:25 INFO MongoSplitVectorPartitioner: No splitKeys were calculated by the splitVector command, proceeding with a single partition. If this is undesirable try lowering
+ 'maxChunkSize' to produce more partitions.
+17/03/27 21:27:25 INFO SparkContext: Starting job: foreach at SpaceWalk.java:103
+17/03/27 21:27:25 INFO DAGScheduler: Registering RDD 1 (flatMapToPair at SpaceWalk.java:47)
+17/03/27 21:27:25 INFO DAGScheduler: Got job 0 (foreach at SpaceWalk.java:103) with 1 output partitions
+17/03/27 21:27:25 INFO DAGScheduler: Final stage: ResultStage 1 (foreach at SpaceWalk.java:103)
+17/03/27 21:27:25 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+17/03/27 21:27:25 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+17/03/27 21:27:26 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[1] at flatMapToPair at SpaceWalk.java:47), which has no missing parents
+17/03/27 21:27:26 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 6.1 KB, free 6.7 KB)
+17/03/27 21:27:26 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.0 KB, free 9.7 KB)
+17/03/27 21:27:26 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:52425 (size: 3.0 KB, free: 511.1 MB)
+17/03/27 21:27:26 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1006
+17/03/27 21:27:26 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[1] at flatMapToPair at SpaceWalk.java:47)
+17/03/27 21:27:26 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+17/03/27 21:27:26 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,ANY, 2294 bytes)
+17/03/27 21:27:26 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+17/03/27 21:27:26 INFO Executor: Fetching http://192.168.56.1:52420/jars/SparkCourse-1.0.0-SNAPSHOT.jar with timestamp 1490630241708
+17/03/27 21:27:26 INFO Utils: Fetching http://192.168.56.1:52420/jars/SparkCourse-1.0.0-SNAPSHOT.jar to C:\Users\Aspire\AppData\Local\Temp\spark-6468ad8c-2075-4c56-b7af-ab2e5b4f81e
+6\userFiles-eb21004c-f945-4d45-be70-106d62c9fd23\fetchFileTemp5429616723285589428.tmp
+17/03/27 21:27:27 INFO Executor: Adding file:/C:/Users/Aspire/AppData/Local/Temp/spark-6468ad8c-2075-4c56-b7af-ab2e5b4f81e6/userFiles-eb21004c-f945-4d45-be70-106d62c9fd23/SparkCour
+se-1.0.0-SNAPSHOT.jar to class loader
+17/03/27 21:27:28 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1158 bytes result sent to driver
+17/03/27 21:27:28 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2174 ms on localhost (1/1)
+17/03/27 21:27:28 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool
+17/03/27 21:27:28 INFO DAGScheduler: ShuffleMapStage 0 (flatMapToPair at SpaceWalk.java:47) finished in 2.211 s
+17/03/27 21:27:28 INFO DAGScheduler: looking for newly runnable stages
+17/03/27 21:27:28 INFO DAGScheduler: running: Set()
+17/03/27 21:27:28 INFO DAGScheduler: waiting: Set(ResultStage 1)
+17/03/27 21:27:28 INFO DAGScheduler: failed: Set()
+17/03/27 21:27:28 INFO DAGScheduler: Submitting ResultStage 1 (ShuffledRDD[2] at reduceByKey at SpaceWalk.java:80), which has no missing parents
+17/03/27 21:27:28 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 2.9 KB, free 12.6 KB)
+17/03/27 21:27:28 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 1780.0 B, free 14.3 KB)
+17/03/27 21:27:28 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:52425 (size: 1780.0 B, free: 511.1 MB)
+17/03/27 21:27:28 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+17/03/27 21:27:28 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (ShuffledRDD[2] at reduceByKey at SpaceWalk.java:80)
+17/03/27 21:27:28 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+17/03/27 21:27:28 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,NODE_LOCAL, 1965 bytes)
+17/03/27 21:27:28 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+17/03/27 21:27:28 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 1 blocks
+17/03/27 21:27:28 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 14 ms
+Ken Bowersox 797
+Don Peterson 257
+Vladimir Dzhanibekov 512
+Mike Collins 89
+Claude Nicollier 490
+Alexandr Ivanchenkov 125
+Woody Spring 746
+Ron Garan 1623
+Vladimir Lyakhov 427
+Patrick Forrester 705
+Harrison Schmidt 1333
+Gennady Strekalov 1322
+Yuri Lonchakov 627
+Bill Pogue 814
+Valentin Lebedev 153
+Hans Schlegel 405
+Gennady Padalka 1601
+Louc Chretien 357
+Mikhail Kornienko 402
+Dave Leestma 209
+Heide Stefanyshyn 2022
+Stan Love 923
+Mike Massimino 1844
+Joe Kerwin 245
+Oleg Skripochka 1001
+Victor Savinykh 298
+Dave Wolf 2516
+Oleg Kotov 1006
+Joe Allen 710
+Rich Clifford 363
+Greg Chamitoff 823
+Musa Manarov 2058
+Nicole Stott 395
+Anatoli Solovyov 1753
+Nick Patrick 1093
+Anton Shkaplerov 375
+Alexandr Serebrov 1913
+Alan Shepard 567
+Dan Burbank 431
+Alexandr Balandin 652
+Jim Voss 1365
+Jeff Wisoff 1193
+Jack Lousma 662
+Sergei Zaletin 330
+Valeri Tsibliev 297
+Mike Fincke 2916
+Sunita Williams 3040
+John Grunsfeld 3510
+Alexandr Poleshchuk 597
+James Irwin 1120
+Pavel Vinogradov 2419
+Richard Gordon 174
+Thomas Reiter 856
+Danny Olivas 2068
+Linda Godwin 615
+Anatoly Solovyev 3086
+Oleg Kononenko 1108
+Tammy Jernigan 475
+Andrew Feustel 2538
+Mike Good 958
+Mike Gernhardt 1396
+Alvin Drew 768
+Leroy Chiao 2176
+Alexei Leonov 12
+Rick Mastracchio 2311
+Alexandr Viktorenko 1184
+Dave Williams 1067
+Chris Cassidy 1875
+Kathy Thornton 1270
+Yuri Onufrenko 1830
+Robert Satcher 739
+Richard Arnold 754
+Alexander Kaleri 1318
+Leonid Kizim 1889
+Christer Fugelsang 820
+Alexander Samokutyaev 383
+Doug Wheelock 1241
+Aleksei Yeliseyov 37
+Vladimir Solovyov 1889
+Russ Schweickart 51
+Yuri Usachev 1849
+Ed White 36
+Roman Romanenko 398
+Bill McArthur 1462
+Alexandr Volkov 610
+Steve Smith 2988
+Christer Fuglesang 1094
+Jim Newman 2593
+Story Musgrave 1579
+Frank Culbertson 304
+Dmitry Kondratiev 614
+Bob Behnken 1093
+Tom Akers 1270
+Alexandr Kaleri 123
+Neil Armstrong 157
+Vladimir Kovalyonok 125
+Robert Curbeam 1545
+Don Pettit 797
+Allen Bean 613
+Mikhail Tyurin 1532
+Sergei Avdeyev 2518
+Tim Kopra 332
+Victor Afanasyev 2314
+Lee Morin 847
+Rick Hieb 553
+Valery Korzun 1339
+Yuri Romanenko 615
+Tom Marshburn 1469
+Bruce McCandless 725
+Mario Runco 268
+Victor Lazerov 0
+Bill Lenoir 0
+Greg Harbaugh 1109
+Eugene Cernan 1460
+Peggy Whitson 2386
+Valeri Tsibliyev 852
+Dan Barry 1549
+Yuri Onufrienko 359
+John Herrington 1195
+Anatoli Berezovsky 153
+Bob Curbeam 1189
+Bernard Harris 279
+Pierre Heignere 379
+Jerry Ross 3501
+Alexandr Laveykin 527
+Gennady Manakov 782
+Yri Onufrienko 363
+Clay Anderson 1091
+Alexandr Alexandrov 344
+Ed Mitchell 567
+Jay Apt 626
+Ed Gibson 921
+Alexander Misurkin 1201
+Mike Lopez 3344
+Dave Griggs 190
+Yuri Malenchenko 1436
+Shane Kimbrough 772
+Anatoli Artsebarsky 1937
+Paul Weitz 136
+Andy Thomas 381
+Mike Foale 1364
+Jim Reilly 1843
+Philippe Perrin 1170
+John Phillips 298
+Steve Bowen 2838
+Mark Lee 1561
+Kathy Sullivan 209
+Doug Wheellock 1369
+Susan Helms 536
+Buzz Aldrin 487
+Sergei Treschev 321
+Nikola Budarin 2672
+Robert Behnken 1159
+Jerry Linenger 297
+David Scott 1200
+Mike Fossum 2912
+Jeff Williams 1149
+Winston Scott 1175
+Talgat Musabeyev 2478
+Vladimir Dezhurov 2257
+Sergei Krikalev 2488
+Svetlana Savitskaya 214
+Michael Good 835
+Randy Bresnick 710
+Joseph Acaba 777
+Yevgeni Khrunov 37
+John Young 1218
+Tom Jones 1189
+Dan Bursch 708
+Bill Fisher 698
+Dale Gardner 710
+Carl Walz 1137
+Steve MacLean 431
+Takao Doi 762
+Valeri Tokarev 666
+Paul Richards 381
+Owen Garriott 823
+Valeri Ryumin 83
+Salizhan Sharipov 598
+Al Worden 39
+Mike Foreman 1939
+Clayton Anderson 1218
+Oleg Makarov 0
+Akihiko Hoshide 1283
+Mike Barratt 306
+Scott Parazynski 2825
+Fyodor Yurchikhin 2324
+Carl Meade 411
+Dan Tani 2351
+James Van 1296
+Pete Conrad 753
+Carlos Noriega 1160
+Rex Walheim 2183
+George Nelson 598
+Maxim Suraev 344
+Georgi Grechko 88
+Charles Duke 1218
+Jeff Hoffman 1512
+Chris Hadfield 890
+Steve Robinson 1205
+Yuri Gidzenko 218
+Tom Mattingly 83
+Yuri Malenchecko 374
+Michael Lopez 716
+Gerald Carr 949
+Pierre Thuot 553
+Ron Evans 67
+Edward Lu 374
+Bob Stewart 725
+Joe Tanner 2789
+Pat Forrester 825
+Piers Sellers 2470
+Soichi Noguchi 1205
+Vladimir Titov 1113
+Tracy Caldwell 1369
+David Low 350
+Steve Swanson 1582
+Fyodor Yurchikin 789
+Sergei Volkov 1116
+Garrett Reisman 1272
+Luca Parmitano 459
+Rick Linnehan 2531
+17/03/27 21:27:29 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1165 bytes result sent to driver
+17/03/27 21:27:29 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 913 ms on localhost (1/1)
+17/03/27 21:27:29 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool
+17/03/27 21:27:29 INFO DAGScheduler: ResultStage 1 (foreach at SpaceWalk.java:103) finished in 0.915 s
+17/03/27 21:27:29 INFO DAGScheduler: Job 0 finished: foreach at SpaceWalk.java:103, took 3.549464 s
+17/03/27 21:27:29 INFO SparkContext: Starting job: foreachPartition at DocumentRDDFunctions.scala:50
+17/03/27 21:27:29 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 143 bytes
+17/03/27 21:27:29 INFO DAGScheduler: Got job 1 (foreachPartition at DocumentRDDFunctions.scala:50) with 1 output partitions
+17/03/27 21:27:29 INFO DAGScheduler: Final stage: ResultStage 3 (foreachPartition at DocumentRDDFunctions.scala:50)
+17/03/27 21:27:29 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+17/03/27 21:27:29 INFO DAGScheduler: Missing parents: List()
+17/03/27 21:27:29 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[3] at flatMap at SpaceWalk.java:101), which has no missing parents
+17/03/27 21:27:29 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 4.6 KB, free 19.0 KB)
+17/03/27 21:27:29 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.5 KB, free 21.5 KB)
+17/03/27 21:27:29 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:52425 (size: 2.5 KB, free: 511.1 MB)
+17/03/27 21:27:29 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1006
+17/03/27 21:27:29 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[3] at flatMap at SpaceWalk.java:101)
+17/03/27 21:27:29 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+17/03/27 21:27:29 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 2, localhost, partition 0,NODE_LOCAL, 1965 bytes)
+17/03/27 21:27:29 INFO Executor: Running task 0.0 in stage 3.0 (TID 2)
+17/03/27 21:27:29 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 1 blocks
+17/03/27 21:27:29 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+17/03/27 21:27:29 INFO cluster: Cluster created with settings {hosts=[127.0.0.1:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueS
+ize=500}
+17/03/27 21:27:29 INFO cluster: Adding discovered server 127.0.0.1:27017 to client view of cluster
+17/03/27 21:27:29 INFO cluster: Cluster description not yet available. Waiting for 30000 ms before timing out
+17/03/27 21:27:29 INFO connection: Opened connection [connectionId{localValue:3, serverValue:5}] to 127.0.0.1:27017
+17/03/27 21:27:29 INFO cluster: Monitor thread successfully connected to server with description ServerDescription{address=127.0.0.1:27017, type=STANDALONE, state=CONNECTED, ok=tru
+e, version=ServerVersion{versionList=[3, 2, 8]}, minWireVersion=0, maxWireVersion=4, maxDocumentSize=16777216, roundTripTimeNanos=907566}
+17/03/27 21:27:29 INFO cluster: Discovered cluster type of STANDALONE
+17/03/27 21:27:29 INFO MongoClientCache: Creating MongoClient: [127.0.0.1:27017]
+17/03/27 21:27:29 INFO connection: Opened connection [connectionId{localValue:4, serverValue:6}] to 127.0.0.1:27017
+17/03/27 21:27:29 INFO Executor: Finished task 0.0 in stage 3.0 (TID 2). 1165 bytes result sent to driver
+17/03/27 21:27:29 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 2) in 392 ms on localhost (1/1)
+17/03/27 21:27:29 INFO DAGScheduler: ResultStage 3 (foreachPartition at DocumentRDDFunctions.scala:50) finished in 0.394 s
+17/03/27 21:27:29 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool
+17/03/27 21:27:29 INFO DAGScheduler: Job 1 finished: foreachPartition at DocumentRDDFunctions.scala:50, took 0.450498 s
+17/03/27 21:27:30 INFO SparkContext: Invoking stop() from shutdown hook
+17/03/27 21:27:30 INFO MongoClientCache: Closing MongoClient: [127.0.0.1:27017]
+17/03/27 21:27:30 INFO connection: Closed connection [connectionId{localValue:4, serverValue:6}] to 127.0.0.1:27017 because the pool has been closed.
+17/03/27 21:27:30 INFO MongoClientCache: Closing MongoClient: [127.0.0.1:27017]
+17/03/27 21:27:30 INFO connection: Closed connection [connectionId{localValue:2, serverValue:4}] to 127.0.0.1:27017 because the pool has been closed.
+17/03/27 21:27:30 INFO SparkUI: Stopped Spark web UI at http://192.168.56.1:4040
+17/03/27 21:27:30 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+17/03/27 21:27:30 INFO MemoryStore: MemoryStore cleared
+17/03/27 21:27:30 INFO BlockManager: BlockManager stopped
+17/03/27 21:27:30 INFO BlockManagerMaster: BlockManagerMaster stopped
+17/03/27 21:27:30 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+17/03/27 21:27:30 INFO SparkContext: Successfully stopped SparkContext
+17/03/27 21:27:30 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+17/03/27 21:27:30 INFO ShutdownHookManager: Shutdown hook called
+17/03/27 21:27:30 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+17/03/27 21:27:30 INFO ShutdownHookManager: Deleting directory C:\Users\Aspire\AppData\Local\Temp\spark-6468ad8c-2075-4c56-b7af-ab2e5b4f81e6\httpd-2fd78021-8f82-4b55-9fa5-cda6ba06e
+20b
+17/03/27 21:27:30 INFO RemoteActorRefProvider$RemotingTerminator: Remoting shut down.

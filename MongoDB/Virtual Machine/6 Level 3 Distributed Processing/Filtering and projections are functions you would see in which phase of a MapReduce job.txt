@@ -1,0 +1,10 @@
+Filtering and projections are functions you would see in which phase of a MapReduce job?
+
+Choose the best answer:
+
+[Single Answer]
+
+Map phase
+Reduce phase
+
+Answer: Map phase

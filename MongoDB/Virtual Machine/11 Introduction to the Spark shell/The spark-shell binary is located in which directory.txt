@@ -1,0 +1,12 @@
+The spark-shell binary is located in which directory?
+
+Choose the best answer:
+
+[Single Answer]
+
+sbin
+bin
+lib
+data
+
+Answer: bin

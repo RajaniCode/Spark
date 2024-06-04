@@ -1,0 +1,11 @@
+The set of operations performed on an RDD is known as the RDD's
+
+Choose the best answer:
+
+[Single Answer]
+
+pipeline
+lineage
+task chain
+
+Answer: lineage

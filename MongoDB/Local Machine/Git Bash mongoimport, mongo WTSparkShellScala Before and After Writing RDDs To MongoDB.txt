@@ -1,0 +1,266 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ mongod --version
+db version v3.2.8
+git version: ed70e33130c977bda0024c125b56d159573dbaf0
+OpenSSL version: OpenSSL 1.0.1p-fips 9 Jul 2015
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: 2008plus-ssl
+    distarch: x86_64
+    target_arch: x86_64
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\MongoDB\Spark"
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/Spark
+$ mongoimport --headerline --file eva.csv --type csv --db nasa --collection eva
+2017-03-27T20:09:52.820+0530    connected to: localhost
+2017-03-27T20:09:53.187+0530    imported 375 documents
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/Spark
+$ winpty mongo
+MongoDB shell version: 3.2.8
+connecting to: test
+> show dbs
+local  0.000GB
+nasa   0.000GB
+> use nasa
+switched to db nasa
+> show collections
+eva
+> db.eva.count()
+375
+> quit()
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/Spark
+$ winpty mongo
+MongoDB shell version: 3.2.8
+connecting to: test
+> show dbs
+local  0.000GB
+nasa   0.000GB
+> use nasa
+switched to db nasa
+> show collections
+astronautTotals
+eva
+> db.astronautTotals.count()
+222
+> db.eva.count()
+375
+> db.astronautTotals.find().pretty()
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c1a"),
+        "name" : "Ken Bowersox",
+        "minutes" : 797
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c1b"),
+        "name" : "Don Peterson",
+        "minutes" : 257
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c1c"),
+        "name" : "Vladimir Dzhanibekov",
+        "minutes" : 512
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c1d"),
+        "name" : "Mike Collins",
+        "minutes" : 89
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c1e"),
+        "name" : "Claude Nicollier",
+        "minutes" : 490
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c1f"),
+        "name" : "Alexandr Ivanchenkov",
+        "minutes" : 125
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c20"),
+        "name" : "Woody Spring",
+        "minutes" : 746
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c21"),
+        "name" : "Ron Garan",
+        "minutes" : 1623
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c22"),
+        "name" : "Vladimir Lyakhov",
+        "minutes" : 427
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c23"),
+        "name" : "Patrick Forrester",
+        "minutes" : 705
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c24"),
+        "name" : "Harrison Schmidt",
+        "minutes" : 1333
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c25"),
+        "name" : "Gennady Strekalov",
+        "minutes" : 1322
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c26"),
+        "name" : "Yuri Lonchakov",
+        "minutes" : 627
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c27"),
+        "name" : "Bill Pogue",
+        "minutes" : 814
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c28"),
+        "name" : "Valentin Lebedev",
+        "minutes" : 153
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c29"),
+        "name" : "Hans Schlegel",
+        "minutes" : 405
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c2a"),
+        "name" : "Gennady Padalka",
+        "minutes" : 1601
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c2b"),
+        "name" : "Louc Chretien",
+        "minutes" : 357
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c2c"),
+        "name" : "Mikhail Kornienko",
+        "minutes" : 402
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c2d"),
+        "name" : "Dave Leestma",
+        "minutes" : 209
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c2e"),
+        "name" : "Heide Stefanyshyn",
+        "minutes" : 2022
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c2f"),
+        "name" : "Stan Love",
+        "minutes" : 923
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c30"),
+        "name" : "Mike Massimino",
+        "minutes" : 1844
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c31"),
+        "name" : "Joe Kerwin",
+        "minutes" : 245
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c32"),
+        "name" : "Oleg Skripochka",
+        "minutes" : 1001
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c33"),
+        "name" : "Victor Savinykh",
+        "minutes" : 298
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c34"),
+        "name" : "Dave Wolf",
+        "minutes" : 2516
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c35"),
+        "name" : "Oleg Kotov",
+        "minutes" : 1006
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c36"),
+        "name" : "Joe Allen",
+        "minutes" : 710
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c37"),
+        "name" : "Rich Clifford",
+        "minutes" : 363
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c38"),
+        "name" : "Greg Chamitoff",
+        "minutes" : 823
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c39"),
+        "name" : "Musa Manarov",
+        "minutes" : 2058
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c3a"),
+        "name" : "Nicole Stott",
+        "minutes" : 395
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c3b"),
+        "name" : "Anatoli Solovyov",
+        "minutes" : 1753
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c3c"),
+        "name" : "Nick Patrick",
+        "minutes" : 1093
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c3d"),
+        "name" : "Anton Shkaplerov",
+        "minutes" : 375
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c3e"),
+        "name" : "Alexandr Serebrov",
+        "minutes" : 1913
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c3f"),
+        "name" : "Alan Shepard",
+        "minutes" : 567
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c40"),
+        "name" : "Dan Burbank",
+        "minutes" : 431
+}
+{
+        "_id" : ObjectId("58d92d57167f0174e4169c41"),
+        "name" : "Alexandr Balandin",
+        "minutes" : 652
+}
+Type "it" for more
+> quit()
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/Spark
+$

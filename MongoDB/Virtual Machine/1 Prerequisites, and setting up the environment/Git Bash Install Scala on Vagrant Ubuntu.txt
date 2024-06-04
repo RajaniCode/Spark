@@ -1,0 +1,198 @@
+﻿
+Aspire@Acer MINGW64 ~
+$ vagrant --version
+Vagrant 1.9.2
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment\Vagrantfile"
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 27017 (guest) => 27017 (host) (adapter 1)
+    default: 8080 (guest) => 8080 (host) (adapter 1)
+    default: 7077 (guest) => 7077 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Remote connection disconnect. Retrying...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default:
+    default: Guest Additions Version: 4.3.36
+    default: VirtualBox Version: 5.1
+==> default: Mounting shared folders...
+    default: /vagrant => E:/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+$ vagrant ssh
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 1.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Thu Mar 23 11:05:30 2017 from 10.0.2.2
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+eva.csv  spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ java -version
+java version "1.8.0_121"
+Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
+vagrant@vagrant-ubuntu-trusty-64:~$ mongod --version
+db version v3.2.12
+git version: ef3e1bc78e997f0d9f22f45aeb1d8e3b6ac14a14
+OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: ubuntu1404
+    distarch: x86_64
+    target_arch: x86_64
+vagrant@vagrant-ubuntu-trusty-64:~$ scala -version
+The program 'scala' is currently not installed. To run 'scala' please ask your administrator to install the package 'scala'
+vagrant@vagrant-ubuntu-trusty-64:~$ wget www.scala-lang.org/files/archive/scala-2.11.7.deb
+--2017-03-23 11:15:42--  http://www.scala-lang.org/files/archive/scala-2.11.7.deb
+Resolving www.scala-lang.org (www.scala-lang.org)... 128.178.154.159
+Connecting to www.scala-lang.org (www.scala-lang.org)|128.178.154.159|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 80381784 (77M) [application/x-debian-package]
+Saving to: ‘scala-2.11.7.deb’
+
+100%[====================================================================================================================================================>] 80,381,784  84.4KB/s   in 16m 8s
+
+2017-03-23 11:31:51 (81.1 KB/s) - ‘scala-2.11.7.deb’ saved [80381784/80381784]
+
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+eva.csv  scala-2.11.7.deb  spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt-get update
+Ign http://repo.mongodb.org trusty/mongodb-org/3.0 InRelease
+Ign http://repo.mongodb.org trusty/mongodb-org/3.2 InRelease
+Hit http://ppa.launchpad.net trusty InRelease
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Get:1 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://repo.mongodb.org trusty/mongodb-org/3.0 Release.gpg
+Hit http://ppa.launchpad.net trusty/main Translation-en
+Hit http://repo.mongodb.org trusty/mongodb-org/3.2 Release.gpg
+Get:2 https://dl.bintray.com  InRelease
+Ign https://dl.bintray.com  InRelease
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit https://dl.bintray.com  Release.gpg
+Get:3 http://archive.ubuntu.com trusty-updates/main Sources [393 kB]
+Hit http://repo.mongodb.org trusty/mongodb-org/3.0 Release
+Get:4 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Hit http://repo.mongodb.org trusty/mongodb-org/3.2 Release
+Hit http://repo.mongodb.org trusty/mongodb-org/3.0/multiverse amd64 Packages
+Hit https://dl.bintray.com  Release
+Hit http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse amd64 Packages
+Get:5 http://archive.ubuntu.com trusty-updates/restricted Sources [6,268 B]
+Hit https://dl.bintray.com  Packages
+Get:6 http://archive.ubuntu.com trusty-updates/universe Sources [175 kB]
+Get:7 http://security.ubuntu.com trusty-security/main Sources [127 kB]
+Get:8 https://dl.bintray.com  Translation-en_US
+Get:9 https://dl.bintray.com  Translation-en
+Ign http://repo.mongodb.org trusty/mongodb-org/3.0/multiverse Translation-en_US
+Ign http://repo.mongodb.org trusty/mongodb-org/3.0/multiverse Translation-en
+Get:10 https://dl.bintray.com  Translation-en_US
+Get:11 https://dl.bintray.com  Translation-en
+Ign http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse Translation-en_US
+Ign http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse Translation-en
+Get:12 https://dl.bintray.com  Translation-en_US
+Get:13 http://archive.ubuntu.com trusty-updates/multiverse Sources [7,513 B]
+Get:14 http://security.ubuntu.com trusty-security/universe Sources [50.3 kB]
+Get:15 https://dl.bintray.com  Translation-en
+Get:16 http://archive.ubuntu.com trusty-updates/main amd64 Packages [961 kB]
+Get:17 https://dl.bintray.com  Translation-en_US
+Get:18 http://security.ubuntu.com trusty-security/main amd64 Packages [594 kB]
+Get:19 https://dl.bintray.com  Translation-en
+Get:20 https://dl.bintray.com  Translation-en_US
+Ign https://dl.bintray.com  Translation-en_US
+Get:21 https://dl.bintray.com  Translation-en
+Ign https://dl.bintray.com  Translation-en
+Get:22 http://security.ubuntu.com trusty-security/universe amd64 Packages [154 kB]
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Get:23 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.1 kB]
+Get:24 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [402 kB]
+Get:25 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.0 kB]
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://archive.ubuntu.com trusty Release
+Hit http://archive.ubuntu.com trusty/main Sources
+Hit http://archive.ubuntu.com trusty/restricted Sources
+Hit http://archive.ubuntu.com trusty/universe Sources
+Hit http://archive.ubuntu.com trusty/multiverse Sources
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 3,034 kB in 1min 13s (41.5 kB/s)
+Reading package lists... Done
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+eva.csv  scala-2.11.7.deb  spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo dpkg -i scala-2.11.7.deb
+Selecting previously unselected package scala.
+(Reading database ... 63415 files and directories currently installed.)
+Preparing to unpack scala-2.11.7.deb ...
+Unpacking scala (2.11.7) ...
+Setting up scala (2.11.7) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+eva.csv  scala-2.11.7.deb  spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ scala -version
+Scala code runner version 2.11.7 -- Copyright 2002-2013, LAMP/EPFL
+vagrant@vagrant-ubuntu-trusty-64:~$ exit
+logout
+Connection to 127.0.0.1 closed.
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+$ exit

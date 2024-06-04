@@ -1,0 +1,11 @@
+The spark connector can infer schema by using:
+
+Choose the best answer:
+
+[Single Answer]
+
+the force
+pure intuition
+$sample
+
+Answer: $sample

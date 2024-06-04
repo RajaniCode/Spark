@@ -1,0 +1,12 @@
+What does the R and N stand for in YARN?
+
+Choose the best answer:
+
+[Single Answer]
+
+Research Navigator
+Resource Negotiator
+Research Negotiator
+Resource Navigator
+
+Answer: Resource Negotiator

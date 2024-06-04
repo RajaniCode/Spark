@@ -1,0 +1,13 @@
+To start of cluster, we need to execute two scripts. These are start-master.sh and:
+
+Check all that apply:
+
+[Multiple Answers]
+
+start-slave.sh
+spark-submit.sh
+spark-run
+
+Answer:
+start-slave.sh
+spark-submit.sh

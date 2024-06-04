@@ -1,0 +1,10 @@
+True or False: Using an aggregation framework task as a prefilter prevents Spark queries from causing a full collection scan.
+
+Choose the best answer:
+
+[Single Answer]
+
+True
+False
+
+Answer: True

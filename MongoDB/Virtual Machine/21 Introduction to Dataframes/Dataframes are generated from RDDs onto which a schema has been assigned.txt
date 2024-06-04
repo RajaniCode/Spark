@@ -1,0 +1,11 @@
+Dataframes are generated from RDDs onto which a schema has been assigned. The two ways to assign a schema are either programmatically, or through:
+
+Choose the best answer:
+
+[Single Answer]
+
+refraction
+reflection
+class mapping
+
+Answer: reflection

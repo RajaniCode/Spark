@@ -1,0 +1,6 @@
+
+$ wget https://data.nasa.gov/api/views/9kcy-zwvn/rows.csv?accessType=DOWNLOAD -O eva.csv
+
+$ ls
+
+$ mongoimport --headerline --file eva.csv --type csv --db nasa --collection eva

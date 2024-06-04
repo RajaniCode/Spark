@@ -1,0 +1,10 @@
+Which command line parameter is used to identify the spark connector dependency?
+
+Choose the best answer:
+
+[Single Answer]
+
+--packages
+--conf
+
+Answer: --packages

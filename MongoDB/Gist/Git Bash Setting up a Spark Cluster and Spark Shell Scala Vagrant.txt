@@ -1,0 +1,1252 @@
+﻿
+Aspire@Acer MINGW64 ~
+$ vagrant --version
+Vagrant 1.9.2
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment\Vagrantfile"
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+$ vagrant ssh
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-112-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+  System information as of Thu Mar 23 12:10:03 UTC 2017
+
+  System load:  0.04              Processes:           76
+  Usage of /:   9.0% of 39.34GB   Users logged in:     0
+  Memory usage: 2%                IP address for eth0: 10.0.2.15
+  Swap usage:   0%
+
+  Graph this data and manage this system at:
+    https://landscape.canonical.com/
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Thu Mar 23 12:10:04 2017 from 10.0.2.2
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+derby.log  eva.csv  metastore_db  scala-2.11.7.deb  spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ java -version
+java version "1.8.0_121"
+Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
+vagrant@vagrant-ubuntu-trusty-64:~$ mongod --version
+db version v3.2.12
+git version: ef3e1bc78e997f0d9f22f45aeb1d8e3b6ac14a14
+OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: ubuntu1404
+    distarch: x86_64
+    target_arch: x86_64
+vagrant@vagrant-ubuntu-trusty-64:~$ scala -version
+Scala code runner version 2.11.7 -- Copyright 2002-2013, LAMP/EPFL
+vagrant@vagrant-ubuntu-trusty-64:~$ mongo
+MongoDB shell version: 3.2.12
+connecting to: test
+Server has startup warnings:
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten]
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten]
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten]
+> db.version()
+3.2.12
+> use nasa
+switched to db nasa
+> db.eva.count()
+375
+> quit()
+vagrant@vagrant-ubuntu-trusty-64:~$ ./spark-1.6.1/bin/spark-shell --packages org.mongodb.spark:mongo-spark-connector_2.10:0.1 --conf "spark.mongodb.input.uri=mongodb://127.0.0.1/nasa.eva" --conf "spark.mongodb.output.uri=mongodb://127.0.0.1/nasa.astronautTotals"
+Ivy Default Cache set to: /home/vagrant/.ivy2/cache
+The jars for the packages stored in: /home/vagrant/.ivy2/jars
+:: loading settings :: url = jar:file:/home/vagrant/spark-1.6.1/lib/spark-assembly-1.6.1-hadoop2.6.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+org.mongodb.spark#mongo-spark-connector_2.10 added as a dependency
+:: resolving dependencies :: org.apache.spark#spark-submit-parent;1.0
+        confs: [default]
+        found org.mongodb.spark#mongo-spark-connector_2.10;0.1 in central
+        found org.mongodb#mongo-java-driver;3.2.2 in central
+:: resolution report :: resolve 1077ms :: artifacts dl 24ms
+        :: modules in use:
+        org.mongodb#mongo-java-driver;3.2.2 from central in [default]
+        org.mongodb.spark#mongo-spark-connector_2.10;0.1 from central in [default]
+        ---------------------------------------------------------------------
+        |                  |            modules            ||   artifacts   |
+        |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+        ---------------------------------------------------------------------
+        |      default     |   2   |   0   |   0   |   0   ||   2   |   0   |
+        ---------------------------------------------------------------------
+:: retrieving :: org.apache.spark#spark-submit-parent
+        confs: [default]
+        0 artifacts copied, 2 already retrieved (0kB/42ms)
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's repl log4j profile: org/apache/spark/log4j-defaults-repl.properties
+To adjust logging level use sc.setLogLevel("INFO")
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 1.6.1
+      /_/
+
+Using Scala version 2.10.5 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_121)
+Type in expressions to have them evaluated.
+Type :help for more information.
+Spark context available as sc.
+17/03/23 12:49:37 WARN Connection: BoneCP specified but not present in CLASSPATH (or one of dependencies)
+17/03/23 12:49:38 WARN Connection: BoneCP specified but not present in CLASSPATH (or one of dependencies)
+17/03/23 12:49:58 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+17/03/23 12:49:58 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
+17/03/23 12:50:06 WARN Connection: BoneCP specified but not present in CLASSPATH (or one of dependencies)
+17/03/23 12:50:08 WARN Connection: BoneCP specified but not present in CLASSPATH (or one of dependencies)
+SQL context available as sqlContext.
+
+scala> import com.mongodb.spark._
+import com.mongodb.spark._
+
+scala> import com.mongodb.spark.rdd.MongoRDD
+import com.mongodb.spark.rdd.MongoRDD
+
+scala> import org.bson.Document
+import org.bson.Document
+
+scala> val rdd = sc.loadFromMongoDB()
+rdd: com.mongodb.spark.rdd.MongoRDD[org.bson.Document] = MongoRDD[0] at RDD at MongoRDD.scala:160
+
+scala> println( rdd.count() )
+375
+
+scala> println( rdd.first() )
+Document{{_id=58d3a29585c1d0a8b717d32d, EVA #=1, Country=USA, Crew=Ed White, Vehicle=Gemini IV, Date=06/03/1965, Duration=0:36, Purpose=First U.S. EVA. Used HHMU and took  photos.  Gas flow cooling of 25ft umbilical overwhelmed by vehicle ingress work and helmet fogged.  Lost overglove.  Jettisoned thermal gloves and helmet sun visor}}
+
+scala> for( doc <- rdd.take ( 10 ) ) println( doc )
+Document{{_id=58d3a29585c1d0a8b717d32d, EVA #=1, Country=USA, Crew=Ed White, Vehicle=Gemini IV, Date=06/03/1965, Duration=0:36, Purpose=First U.S. EVA. Used HHMU and took  photos.  Gas flow cooling of 25ft umbilical overwhelmed by vehicle ingress work and helmet fogged.  Lost overglove.  Jettisoned thermal gloves and helmet sun visor}}
+Document{{_id=58d3a29585c1d0a8b717d32e, EVA #=2, Country=USA, Crew=David Scott, Vehicle=Gemini VIII, Date=March 16-17, 1966, Duration=0:00, Purpose=HHMU EVA cancelled before starting by stuck on vehicle thruster that ended mission early}}
+Document{{_id=58d3a29585c1d0a8b717d32f, EVA #=3, Country=USA, Crew=Eugene Cernan, Vehicle=Gemini IX-A, Date=06/05/1966, Duration=2:07, Purpose=Inadequate restraints, stiff 25ft umbilical and high workloads exceeded suit vent loop cooling capacity and caused fogging.  Demo called off of tethered astronaut maneuvering unit}}
+Document{{_id=58d3a29585c1d0a8b717d330, EVA #=4, Country=USA, Crew=Mike Collins, Vehicle=Gemini X, Date=07/19/1966, Duration=0:50, Purpose=Standup EVA.  UV photos of stars.  Ended by eye irritation that impaired vision}}
+Document{{_id=58d3a29585c1d0a8b717d331, EVA #=5, Country=USA, Crew=Mike Collins, Vehicle=Gemini X, Date=07/20/1966, Duration=0:39, Purpose=Retrieved MMOD experiment from docked Agena.  Used HHMU. Lost camera and retrieved experiment. EVA ended early by unrelated spacecraft problem}}
+Document{{_id=58d3a29585c1d0a8b717d332, EVA #=6, Country=USA, Crew=Richard Gordon, Vehicle=Gemini XI, Date=09/13/1966, Duration=0:44, Purpose=Attached tether between Agena and Gemini.  EVA ended early due to fatigue, overheating & eye sweat}}
+Document{{_id=58d3a29585c1d0a8b717d333, EVA #=7, Country=USA, Crew=Richard Gordon, Vehicle=Gemini XI, Date=09/14/1966, Duration=2:10, Purpose=Standup EVA.  Took star photos. Agena tether ops}}
+Document{{_id=58d3a29585c1d0a8b717d334, EVA #=8, Country=USA, Crew=Buzz Aldrin, Vehicle=Gemini XII, Date=11/12/1966, Duration=2:29, Purpose=Standup EVA.  Science tasks.  Took star photos}}
+Document{{_id=58d3a29585c1d0a8b717d335, EVA #=9, Country=USA, Crew=Buzz Aldrin, Vehicle=Gemini XII, Date=11/13/1966, Duration=2:06, Purpose=Attached tether between Agena and Gemini.  UV photos of stars.  Waist tether and Dutch shoe eval}}
+Document{{_id=58d3a29585c1d0a8b717d336, EVA #=10, Country=USA, Crew=Buzz Aldrin, Vehicle=Gemini XII, Date=11/14/1966, Duration=0:55, Purpose=Standup EVA.  Jettisoned equipment.  Took photos}}
+
+scala> import com.mongodb.spark.config._
+import com.mongodb.spark.config._
+
+scala> val readConf = ReadConfig( sc )
+readConf: com.mongodb.spark.config.ReadConfig.Self = ReadConfig(nasa,eva,Some(mongodb://127.0.0.1/nasa.eva),1000,64,_id,15,ReadPreferenceConfig(primary,None),ReadConcernConfig(None))
+
+scala> val readConfig = ReadConfig( Map("collection" -> "eva" ), Some(readConf))
+readConfig: com.mongodb.spark.config.ReadConfig = ReadConfig(nasa,eva,Some(mongodb://127.0.0.1/nasa.eva),1000,64,_id,15,ReadPreferenceConfig(primary,None),ReadConcernConfig(None))
+
+scala> val newRDD = sc.loadFromMongoDB( readConfig = readConfig )
+newRDD: com.mongodb.spark.rdd.MongoRDD[org.bson.Document] = MongoRDD[1] at RDD at MongoRDD.scala:160
+
+scala> println( rdd.first() )
+Document{{_id=58d3a29585c1d0a8b717d32d, EVA #=1, Country=USA, Crew=Ed White, Vehicle=Gemini IV, Date=06/03/1965, Duration=0:36, Purpose=First U.S. EVA. Used HHMU and took  photos.  Gas flow cooling of 25ft umbilical overwhelmed by vehicle ingress work and helmet fogged.  Lost overglove.  Jettisoned thermal gloves and helmet sun visor}}
+
+scala> def  breakoutCrew (  document: Document  ): List[(String,Int)]  = {
+     |
+     |   var minutes = 0;
+     |   val timeString = document.get( "Duration").asInstanceOf[String]
+     |   if( timeString != null && !timeString.isEmpty ) {
+     |     val time =  document.get( "Duration").asInstanceOf[String].split( ":" )
+     |     minutes = time(0).toInt * 60 + time(1).toInt
+     |   }
+     |
+     |   import scala.util.matching.Regex
+     |   val pattern = new Regex("(\\w+\\s\\w+)")
+     |   val names =  pattern findAllIn document.get( "Crew" ).asInstanceOf[String]
+     |   var tuples : List[(String,Int)] = List()
+     |   for ( name <- names ) { tuples = tuples :+ (( name, minutes ) ) }
+     |
+     |   return tuples
+     | }
+breakoutCrew: (document: org.bson.Document)List[(String, Int)]
+
+scala> val logs = rdd.flatMap( breakoutCrew ).reduceByKey( (m1: Int, m2: Int) => ( m1 + m2 ) )
+logs: org.apache.spark.rdd.RDD[(String, Int)] = ShuffledRDD[3] at reduceByKey at <console>:39
+
+scala> logs.foreach( println )
+(Ken Bowersox,797)
+(Don Peterson,257)
+(Vladimir Dzhanibekov,512)
+(Mike Collins,89)
+(Claude Nicollier,490)
+(Alexandr Ivanchenkov,125)
+(Woody Spring,746)
+(Ron Garan,1623)
+(Vladimir Lyakhov,427)
+(Patrick Forrester,705)
+(Harrison Schmidt,1333)
+(Gennady Strekalov,1322)
+(Yuri Lonchakov,627)
+(Bill Pogue,814)
+(Valentin Lebedev,153)
+(Hans Schlegel,405)
+(Gennady Padalka,1601)
+(Louc Chretien,357)
+(Mikhail Kornienko,402)
+(Dave Leestma,209)
+(Heide Stefanyshyn,2022)
+(Stan Love,923)
+(Mike Massimino,1844)
+(Joe Kerwin,245)
+(Oleg Skripochka,1001)
+(Victor Savinykh,298)
+(Dave Wolf,2516)
+(Oleg Kotov,1006)
+(Joe Allen,710)
+(Rich Clifford,363)
+(Greg Chamitoff,823)
+(Musa Manarov,2058)
+(Nicole Stott,395)
+(Anatoli Solovyov,1753)
+(Nick Patrick,1093)
+(Anton Shkaplerov,375)
+(Alexandr Serebrov,1913)
+(Alan Shepard,567)
+(Dan Burbank,431)
+(Alexandr Balandin,652)
+(Jim Voss,1365)
+(Jeff Wisoff,1193)
+(Jack Lousma,662)
+(Sergei Zaletin,330)
+(Valeri Tsibliev,297)
+(Mike Fincke,2916)
+(Sunita Williams,3040)
+(John Grunsfeld,3510)
+(Alexandr Poleshchuk,597)
+(James Irwin,1120)
+(Pavel Vinogradov,2419)
+(Richard Gordon,174)
+(Thomas Reiter,856)
+(Danny Olivas,2068)
+(Linda Godwin,615)
+(Anatoly Solovyev,3086)
+(Oleg Kononenko,1108)
+(Tammy Jernigan,475)
+(Andrew Feustel,2538)
+(Mike Good,958)
+(Mike Gernhardt,1396)
+(Alvin Drew,768)
+(Leroy Chiao,2176)
+(Alexei Leonov,12)
+(Rick Mastracchio,2311)
+(Alexandr Viktorenko,1184)
+(Dave Williams,1067)
+(Chris Cassidy,1875)
+(Kathy Thornton,1270)
+(Yuri Onufrenko,1830)
+(Robert Satcher,739)
+(Richard Arnold,754)
+(Alexander Kaleri,1318)
+(Leonid Kizim,1889)
+(Christer Fugelsang,820)
+(Alexander Samokutyaev,383)
+(Doug Wheelock,1241)
+(Aleksei Yeliseyov,37)
+(Vladimir Solovyov,1889)
+(Russ Schweickart,51)
+(Yuri Usachev,1849)
+(Ed White,36)
+(Roman Romanenko,398)
+(Bill McArthur,1462)
+(Alexandr Volkov,610)
+(Steve Smith,2988)
+(Christer Fuglesang,1094)
+(Jim Newman,2593)
+(Story Musgrave,1579)
+(Frank Culbertson,304)
+(Dmitry Kondratiev,614)
+(Bob Behnken,1093)
+(Tom Akers,1270)
+(Alexandr Kaleri,123)
+(Neil Armstrong,157)
+(Vladimir Kovalyonok,125)
+(Robert Curbeam,1545)
+(Don Pettit,797)
+(Allen Bean,613)
+(Mikhail Tyurin,1532)
+(Sergei Avdeyev,2518)
+(Tim Kopra,332)
+(Victor Afanasyev,2314)
+(Lee Morin,847)
+(Rick Hieb,553)
+(Valery Korzun,1339)
+(Yuri Romanenko,615)
+(Tom Marshburn,1469)
+(Bruce McCandless,725)
+(Mario Runco,268)
+(Victor Lazerov,0)
+(Bill Lenoir,0)
+(Greg Harbaugh,1109)
+(Eugene Cernan,1460)
+(Peggy Whitson,2386)
+(Valeri Tsibliyev,852)
+(Dan Barry,1549)
+(Yuri Onufrienko,359)
+(John Herrington,1195)
+(Anatoli Berezovsky,153)
+(Bob Curbeam,1189)
+(Bernard Harris,279)
+(Pierre Heignere,379)
+(Jerry Ross,3501)
+(Alexandr Laveykin,527)
+(Gennady Manakov,782)
+(Yri Onufrienko,363)
+(Clay Anderson,1091)
+(Alexandr Alexandrov,344)
+(Ed Mitchell,567)
+(Jay Apt,626)
+(Ed Gibson,921)
+(Alexander Misurkin,1201)
+(Mike Lopez,3344)
+(Dave Griggs,190)
+(Yuri Malenchenko,1436)
+(Shane Kimbrough,772)
+(Anatoli Artsebarsky,1937)
+(Paul Weitz,136)
+(Andy Thomas,381)
+(Mike Foale,1364)
+(Jim Reilly,1843)
+(Philippe Perrin,1170)
+(John Phillips,298)
+(Steve Bowen,2838)
+(Mark Lee,1561)
+(Kathy Sullivan,209)
+(Doug Wheellock,1369)
+(Susan Helms,536)
+(Buzz Aldrin,487)
+(Sergei Treschev,321)
+(Nikola Budarin,2672)
+(Robert Behnken,1159)
+(Jerry Linenger,297)
+(David Scott,1200)
+(Mike Fossum,2912)
+(Jeff Williams,1149)
+(Winston Scott,1175)
+(Talgat Musabeyev,2478)
+(Vladimir Dezhurov,2257)
+(Sergei Krikalev,2488)
+(Svetlana Savitskaya,214)
+(Michael Good,835)
+(Randy Bresnick,710)
+(Joseph Acaba,777)
+(Yevgeni Khrunov,37)
+(John Young,1218)
+(Tom Jones,1189)
+(Dan Bursch,708)
+(Bill Fisher,698)
+(Dale Gardner,710)
+(Carl Walz,1137)
+(Steve MacLean,431)
+(Takao Doi,762)
+(Valeri Tokarev,666)
+(Paul Richards,381)
+(Owen Garriott,823)
+(Valeri Ryumin,83)
+(Salizhan Sharipov,598)
+(Al Worden,39)
+(Mike Foreman,1939)
+(Clayton Anderson,1218)
+(Oleg Makarov,0)
+(Akihiko Hoshide,1283)
+(Mike Barratt,306)
+(Scott Parazynski,2825)
+(Fyodor Yurchikhin,2324)
+(Carl Meade,411)
+(Dan Tani,2351)
+(James Van,1296)
+(Pete Conrad,753)
+(Carlos Noriega,1160)
+(Rex Walheim,2183)
+(George Nelson,598)
+(Maxim Suraev,344)
+(Georgi Grechko,88)
+(Charles Duke,1218)
+(Jeff Hoffman,1512)
+(Chris Hadfield,890)
+(Steve Robinson,1205)
+(Yuri Gidzenko,218)
+(Tom Mattingly,83)
+(Yuri Malenchecko,374)
+(Michael Lopez,716)
+(Gerald Carr,949)
+(Pierre Thuot,553)
+(Ron Evans,67)
+(Edward Lu,374)
+(Bob Stewart,725)
+(Joe Tanner,2789)
+(Pat Forrester,825)
+(Piers Sellers,2470)
+(Soichi Noguchi,1205)
+(Vladimir Titov,1113)
+(Tracy Caldwell,1369)
+(David Low,350)
+(Steve Swanson,1582)
+(Fyodor Yurchikin,789)
+(Sergei Volkov,1116)
+(Garrett Reisman,1272)
+(Luca Parmitano,459)
+(Rick Linnehan,2531)
+
+scala> val writeConf = WriteConfig(sc)
+writeConf: com.mongodb.spark.config.WriteConfig.Self = WriteConfig(nasa,astronautTotals,15,Some(mongodb://127.0.0.1/nasa.astronautTotals),WriteConcernConfig(None,None,None,None))
+
+scala> val writeConfig = WriteConfig(Map("collection" -> "astronautTotals", "writeConcern.w" -> "majority", "db" -> "nasa"), Some(writeConf))
+writeConfig: com.mongodb.spark.config.WriteConfig = WriteConfig(nasa,astronautTotals,15,Some(mongodb://127.0.0.1/nasa.astronautTotals),WriteConcernConfig(None,Some(majority),None,None))
+
+scala> def mapToDocument( tuple: (String, Int )  ): Document = {
+     |   val doc = new Document();
+     |   doc.put( "name", tuple._1 )
+     |   doc.put( "minutes", tuple._2 )
+     |
+     |   return doc
+     | }
+mapToDocument: (tuple: (String, Int))org.bson.Document
+
+scala> logs.map( mapToDocument ).saveToMongoDB( writeConfig )
+
+scala> val rdd = sc.loadFromMongoDB()
+rdd: com.mongodb.spark.rdd.MongoRDD[org.bson.Document] = MongoRDD[5] at RDD at MongoRDD.scala:160
+
+scala> val aggRdd = rdd.withPipeline(Seq(Document.parse("{ $match: { Country: \"USA\" } }")))
+aggRdd: com.mongodb.spark.rdd.MongoRDD[org.bson.Document] = MongoRDD[6] at RDD at MongoRDD.scala:160
+
+scala> import org.apache.spark.sql.SQLContext
+import org.apache.spark.sql.SQLContext
+
+scala> import com.mongodb.spark.sql._
+import com.mongodb.spark.sql._
+
+scala> val evadf = sqlContext.read.mongo()
+evadf: org.apache.spark.sql.DataFrame = [Country: string, Crew: string, Date: string, Duration: string, EVA #: conflict, Purpose: string, Vehicle: string, _id: string]
+
+scala> evadf.registerTempTable("evas")
+
+scala> evadf.show()
++-------+--------------------+-----------------+--------+-----+--------------------+-----------+--------------------+
+|Country|                Crew|             Date|Duration|EVA #|             Purpose|    Vehicle|                 _id|
++-------+--------------------+-----------------+--------+-----+--------------------+-----------+--------------------+
+|    USA|            Ed White|       06/03/1965|    0:36|    1|First U.S. EVA. U...|  Gemini IV|58d3a29585c1d0a8b...|
+|    USA|         David Scott|March 16-17, 1966|    0:00|    2|HHMU EVA cancelle...|Gemini VIII|58d3a29585c1d0a8b...|
+|    USA|       Eugene Cernan|       06/05/1966|    2:07|    3|Inadequate restra...|Gemini IX-A|58d3a29585c1d0a8b...|
+|    USA|        Mike Collins|       07/19/1966|    0:50|    4|Standup EVA.  UV ...|   Gemini X|58d3a29585c1d0a8b...|
+|    USA|        Mike Collins|       07/20/1966|    0:39|    5|Retrieved MMOD ex...|   Gemini X|58d3a29585c1d0a8b...|
+|    USA|      Richard Gordon|       09/13/1966|    0:44|    6|Attached tether b...|  Gemini XI|58d3a29585c1d0a8b...|
+|    USA|      Richard Gordon|       09/14/1966|    2:10|    7|Standup EVA.  Too...|  Gemini XI|58d3a29585c1d0a8b...|
+|    USA|         Buzz Aldrin|       11/12/1966|    2:29|    8|Standup EVA.  Sci...| Gemini XII|58d3a29585c1d0a8b...|
+|    USA|         Buzz Aldrin|       11/13/1966|    2:06|    9|Attached tether b...| Gemini XII|58d3a29585c1d0a8b...|
+|    USA|         Buzz Aldrin|       11/14/1966|    0:55|   10|Standup EVA.  Jet...| Gemini XII|58d3a29585c1d0a8b...|
+|    USA|         David Scott|       03/06/1969|    0:47|   11|Standup EVA from ...|   Apollo 9|58d3a29585c1d0a8b...|
+|    USA|    Russ Schweickart|       03/06/1969|    0:51|   12|Lunar module base...|   Apollo 9|58d3a29585c1d0a8b...|
+|    USA|Neil Armstrong   ...|       07/20/1969|    2:32|   13|First to walk on ...|  Apollo 11|58d3a29585c1d0a8b...|
+|    USA|Neil Armstrong   ...|       07/20/1969|    0:05|   14|Jettison suit bac...|  Apollo 11|58d3a29585c1d0a8b...|
+|    USA|Allen Bean       ...|       11/19/1969|    3:39|   15|Collected 75.6 lb...|  Apollo 12|58d3a29585c1d0a8b...|
+|    USA|Allen Bean       ...|       11/20/1969|    3:48|   16|Retrieved parts o...|  Apollo 12|58d3a29585c1d0a8b...|
+|    USA|Allen Bean       ...|       11/20/1969|    0:05|   17|Jettison suit bac...|  Apollo 12|58d3a29585c1d0a8b...|
+|    USA|Ed Mitchell      ...|       02/05/1971|    4:48|   18|Collected 94.4 lb...|  Apollo 14|58d3a29585c1d0a8b...|
+|    USA|Ed Mitchell      ...|       02/06/1971|    4:34|   19|Sought but did no...|  Apollo 14|58d3a29585c1d0a8b...|
+|    USA|Ed Mitchell      ...|       02/06/1971|    0:05|   20|Jettison suit bac...|  Apollo 14|58d3a29585c1d0a8b...|
++-------+--------------------+-----------------+--------+-----+--------------------+-----------+--------------------+
+only showing top 20 rows
+
+
+scala> evadf.count()
+res8: Long = 375
+
+scala> evadf.printSchema()
+root
+ |-- Country: string (nullable = true)
+ |-- Crew: string (nullable = true)
+ |-- Date: string (nullable = true)
+ |-- Duration: string (nullable = true)
+ |-- EVA #: conflict (nullable = true)
+ |-- Purpose: string (nullable = true)
+ |-- Vehicle: string (nullable = true)
+ |-- _id: string (nullable = true)
+
+
+scala> case class astronautTotal ( name: String, minutes: Integer )
+defined class astronautTotal
+
+scala> val astronautDF = sqlContext.read.option("collection", "astronautTotals").mongo[astronautTotal]()
+astronautDF: org.apache.spark.sql.DataFrame = [name: string, minutes: int]
+
+scala> astronautDF.registerTempTable("astronautTotals")
+
+scala> astronautDF.printSchema()
+root
+ |-- name: string (nullable = true)
+ |-- minutes: integer (nullable = true)
+
+
+scala> sqlContext.sql("SELECT astronautTotals.name, astronautTotals.minutes FROM astronautTotals"  ).show()
++--------------------+-------+
+|                name|minutes|
++--------------------+-------+
+|        Ken Bowersox|    797|
+|        Don Peterson|    257|
+|Vladimir Dzhanibekov|    512|
+|        Mike Collins|     89|
+|    Claude Nicollier|    490|
+|Alexandr Ivanchenkov|    125|
+|        Woody Spring|    746|
+|           Ron Garan|   1623|
+|    Vladimir Lyakhov|    427|
+|   Patrick Forrester|    705|
+|    Harrison Schmidt|   1333|
+|   Gennady Strekalov|   1322|
+|      Yuri Lonchakov|    627|
+|          Bill Pogue|    814|
+|    Valentin Lebedev|    153|
+|       Hans Schlegel|    405|
+|     Gennady Padalka|   1601|
+|       Louc Chretien|    357|
+|   Mikhail Kornienko|    402|
+|        Dave Leestma|    209|
++--------------------+-------+
+only showing top 20 rows
+
+
+scala> sqlContext.sql("SELECT astronautTotals.name, astronautTotals.minutes, evas.Vehicle, evas.Duration FROM " +
+     |   "astronautTotals JOIN evas ON astronautTotals.name LIKE evas.Crew"  ).show()
++----------------+-------+-----------+--------+
+|            name|minutes|    Vehicle|Duration|
++----------------+-------+-----------+--------+
+|    Mike Collins|     89|   Gemini X|    0:50|
+|    Mike Collins|     89|   Gemini X|    0:39|
+|  Richard Gordon|    174|  Gemini XI|    0:44|
+|  Richard Gordon|    174|  Gemini XI|    2:10|
+|   Alexei Leonov|     12|  Voskhod 2|    0:12|
+|Russ Schweickart|     51|   Apollo 9|    0:51|
+|        Ed White|     36|  Gemini IV|    0:36|
+|   Eugene Cernan|   1460|Gemini IX-A|    2:07|
+|     Buzz Aldrin|    487| Gemini XII|    2:29|
+|     Buzz Aldrin|    487| Gemini XII|    2:06|
+|     Buzz Aldrin|    487| Gemini XII|    0:55|
+|     David Scott|   1200|Gemini VIII|    0:00|
+|     David Scott|   1200|   Apollo 9|    0:47|
+|     David Scott|   1200|  Apollo 15|    0:33|
+|       Al Worden|     39|  Apollo 15|    0:39|
+|   Tom Mattingly|     83|  Apollo 16|    1:23|
+|       Ron Evans|     67|  Apollo 17|    1:07|
++----------------+-------+-----------+--------+
+
+
+scala> :help
+All commands can be abbreviated, e.g. :he instead of :help.
+Those marked with a * have more detailed help, e.g. :help imports.
+
+:cp <path>                 add a jar or directory to the classpath
+:help [command]            print this summary or command-specific help
+:history [num]             show the history (optional num is commands to show)
+:h? <string>               search the history
+:imports [name name ...]   show import history, identifying sources of names
+:implicits [-v]            show the implicits in scope
+:javap <path|class>        disassemble a file or class name
+:load <path>               load and interpret a Scala file
+:paste                     enter paste mode: all input up to ctrl-D compiled together
+:quit                      exit the repl
+:replay                    reset execution and replay all previous commands
+:reset                     reset the repl to its initial state, forgetting all session entries
+:sh <command line>         run a shell command (result is implicitly => List[String])
+:silent                    disable/enable automatic printing of results
+:fallback
+disable/enable advanced repl changes, these fix some issues but may introduce others.
+This mode will be removed once these fixes stablize
+:type [-v] <expr>          display the type of an expression without evaluating it
+:warnings                  show the suppressed warnings from the most recent line which had any
+
+scala> :quit
+Stopping spark context.
+vagrant@vagrant-ubuntu-trusty-64:~$ mongo
+MongoDB shell version: 3.2.12
+connecting to: test
+Server has startup warnings:
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten]
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten]
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-03-23T11:59:29.732+0000 I CONTROL  [initandlisten]
+> db.version()
+3.2.12
+> show databases
+local  0.000GB
+nasa   0.000GB
+> show dbs
+local  0.000GB
+nasa   0.000GB
+> db.getMongo().getDBNames()
+[ "local", "nasa" ]
+> db.adminCommand('listDatabases')
+{
+        "databases" : [
+                {
+                        "name" : "local",
+                        "sizeOnDisk" : 73728,
+                        "empty" : false
+                },
+                {
+                        "name" : "nasa",
+                        "sizeOnDisk" : 139264,
+                        "empty" : false
+                }
+        ],
+        "totalSize" : 212992,
+        "ok" : 1
+}
+> use nasa
+switched to db nasa
+> show collections
+astronautTotals
+eva
+> show tables
+astronautTotals
+eva
+> db.getCollectionNames()
+[ "astronautTotals", "eva" ]
+> db.astronautTotals.find().pretty()
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee15"),
+        "name" : "Ken Bowersox",
+        "minutes" : 797
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee16"),
+        "name" : "Don Peterson",
+        "minutes" : 257
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee17"),
+        "name" : "Vladimir Dzhanibekov",
+        "minutes" : 512
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee18"),
+        "name" : "Mike Collins",
+        "minutes" : 89
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee19"),
+        "name" : "Claude Nicollier",
+        "minutes" : 490
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee1a"),
+        "name" : "Alexandr Ivanchenkov",
+        "minutes" : 125
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee1b"),
+        "name" : "Woody Spring",
+        "minutes" : 746
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee1c"),
+        "name" : "Ron Garan",
+        "minutes" : 1623
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee1d"),
+        "name" : "Vladimir Lyakhov",
+        "minutes" : 427
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee1e"),
+        "name" : "Patrick Forrester",
+        "minutes" : 705
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee1f"),
+        "name" : "Harrison Schmidt",
+        "minutes" : 1333
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee20"),
+        "name" : "Gennady Strekalov",
+        "minutes" : 1322
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee21"),
+        "name" : "Yuri Lonchakov",
+        "minutes" : 627
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee22"),
+        "name" : "Bill Pogue",
+        "minutes" : 814
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee23"),
+        "name" : "Valentin Lebedev",
+        "minutes" : 153
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee24"),
+        "name" : "Hans Schlegel",
+        "minutes" : 405
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee25"),
+        "name" : "Gennady Padalka",
+        "minutes" : 1601
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee26"),
+        "name" : "Louc Chretien",
+        "minutes" : 357
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee27"),
+        "name" : "Mikhail Kornienko",
+        "minutes" : 402
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee28"),
+        "name" : "Dave Leestma",
+        "minutes" : 209
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee29"),
+        "name" : "Heide Stefanyshyn",
+        "minutes" : 2022
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee2a"),
+        "name" : "Stan Love",
+        "minutes" : 923
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee2b"),
+        "name" : "Mike Massimino",
+        "minutes" : 1844
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee2c"),
+        "name" : "Joe Kerwin",
+        "minutes" : 245
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee2d"),
+        "name" : "Oleg Skripochka",
+        "minutes" : 1001
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee2e"),
+        "name" : "Victor Savinykh",
+        "minutes" : 298
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee2f"),
+        "name" : "Dave Wolf",
+        "minutes" : 2516
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee30"),
+        "name" : "Oleg Kotov",
+        "minutes" : 1006
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee31"),
+        "name" : "Joe Allen",
+        "minutes" : 710
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee32"),
+        "name" : "Rich Clifford",
+        "minutes" : 363
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee33"),
+        "name" : "Greg Chamitoff",
+        "minutes" : 823
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee34"),
+        "name" : "Musa Manarov",
+        "minutes" : 2058
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee35"),
+        "name" : "Nicole Stott",
+        "minutes" : 395
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee36"),
+        "name" : "Anatoli Solovyov",
+        "minutes" : 1753
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee37"),
+        "name" : "Nick Patrick",
+        "minutes" : 1093
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee38"),
+        "name" : "Anton Shkaplerov",
+        "minutes" : 375
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee39"),
+        "name" : "Alexandr Serebrov",
+        "minutes" : 1913
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee3a"),
+        "name" : "Alan Shepard",
+        "minutes" : 567
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee3b"),
+        "name" : "Dan Burbank",
+        "minutes" : 431
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee3c"),
+        "name" : "Alexandr Balandin",
+        "minutes" : 652
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee3d"),
+        "name" : "Jim Voss",
+        "minutes" : 1365
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee3e"),
+        "name" : "Jeff Wisoff",
+        "minutes" : 1193
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee3f"),
+        "name" : "Jack Lousma",
+        "minutes" : 662
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee40"),
+        "name" : "Sergei Zaletin",
+        "minutes" : 330
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee41"),
+        "name" : "Valeri Tsibliev",
+        "minutes" : 297
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee42"),
+        "name" : "Mike Fincke",
+        "minutes" : 2916
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee43"),
+        "name" : "Sunita Williams",
+        "minutes" : 3040
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee44"),
+        "name" : "John Grunsfeld",
+        "minutes" : 3510
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee45"),
+        "name" : "Alexandr Poleshchuk",
+        "minutes" : 597
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee46"),
+        "name" : "James Irwin",
+        "minutes" : 1120
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee47"),
+        "name" : "Pavel Vinogradov",
+        "minutes" : 2419
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee48"),
+        "name" : "Richard Gordon",
+        "minutes" : 174
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee49"),
+        "name" : "Thomas Reiter",
+        "minutes" : 856
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee4a"),
+        "name" : "Danny Olivas",
+        "minutes" : 2068
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee4b"),
+        "name" : "Linda Godwin",
+        "minutes" : 615
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee4c"),
+        "name" : "Anatoly Solovyev",
+        "minutes" : 3086
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee4d"),
+        "name" : "Oleg Kononenko",
+        "minutes" : 1108
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee4e"),
+        "name" : "Tammy Jernigan",
+        "minutes" : 475
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee4f"),
+        "name" : "Andrew Feustel",
+        "minutes" : 2538
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee50"),
+        "name" : "Mike Good",
+        "minutes" : 958
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee51"),
+        "name" : "Mike Gernhardt",
+        "minutes" : 1396
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee52"),
+        "name" : "Alvin Drew",
+        "minutes" : 768
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee53"),
+        "name" : "Leroy Chiao",
+        "minutes" : 2176
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee54"),
+        "name" : "Alexei Leonov",
+        "minutes" : 12
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee55"),
+        "name" : "Rick Mastracchio",
+        "minutes" : 2311
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee56"),
+        "name" : "Alexandr Viktorenko",
+        "minutes" : 1184
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee57"),
+        "name" : "Dave Williams",
+        "minutes" : 1067
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee58"),
+        "name" : "Chris Cassidy",
+        "minutes" : 1875
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee59"),
+        "name" : "Kathy Thornton",
+        "minutes" : 1270
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee5a"),
+        "name" : "Yuri Onufrenko",
+        "minutes" : 1830
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee5b"),
+        "name" : "Robert Satcher",
+        "minutes" : 739
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee5c"),
+        "name" : "Richard Arnold",
+        "minutes" : 754
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee5d"),
+        "name" : "Alexander Kaleri",
+        "minutes" : 1318
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee5e"),
+        "name" : "Leonid Kizim",
+        "minutes" : 1889
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee5f"),
+        "name" : "Christer Fugelsang",
+        "minutes" : 820
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee60"),
+        "name" : "Alexander Samokutyaev",
+        "minutes" : 383
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee61"),
+        "name" : "Doug Wheelock",
+        "minutes" : 1241
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee62"),
+        "name" : "Aleksei Yeliseyov",
+        "minutes" : 37
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee63"),
+        "name" : "Vladimir Solovyov",
+        "minutes" : 1889
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee64"),
+        "name" : "Russ Schweickart",
+        "minutes" : 51
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee65"),
+        "name" : "Yuri Usachev",
+        "minutes" : 1849
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee66"),
+        "name" : "Ed White",
+        "minutes" : 36
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee67"),
+        "name" : "Roman Romanenko",
+        "minutes" : 398
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee68"),
+        "name" : "Bill McArthur",
+        "minutes" : 1462
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee69"),
+        "name" : "Alexandr Volkov",
+        "minutes" : 610
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee6a"),
+        "name" : "Steve Smith",
+        "minutes" : 2988
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee6b"),
+        "name" : "Christer Fuglesang",
+        "minutes" : 1094
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee6c"),
+        "name" : "Jim Newman",
+        "minutes" : 2593
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee6d"),
+        "name" : "Story Musgrave",
+        "minutes" : 1579
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee6e"),
+        "name" : "Frank Culbertson",
+        "minutes" : 304
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee6f"),
+        "name" : "Dmitry Kondratiev",
+        "minutes" : 614
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee70"),
+        "name" : "Bob Behnken",
+        "minutes" : 1093
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee71"),
+        "name" : "Tom Akers",
+        "minutes" : 1270
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee72"),
+        "name" : "Alexandr Kaleri",
+        "minutes" : 123
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee73"),
+        "name" : "Neil Armstrong",
+        "minutes" : 157
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee74"),
+        "name" : "Vladimir Kovalyonok",
+        "minutes" : 125
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee75"),
+        "name" : "Robert Curbeam",
+        "minutes" : 1545
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee76"),
+        "name" : "Don Pettit",
+        "minutes" : 797
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee77"),
+        "name" : "Allen Bean",
+        "minutes" : 613
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee78"),
+        "name" : "Mikhail Tyurin",
+        "minutes" : 1532
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee79"),
+        "name" : "Sergei Avdeyev",
+        "minutes" : 2518
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee7a"),
+        "name" : "Tim Kopra",
+        "minutes" : 332
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee7b"),
+        "name" : "Victor Afanasyev",
+        "minutes" : 2314
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee7c"),
+        "name" : "Lee Morin",
+        "minutes" : 847
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee7d"),
+        "name" : "Rick Hieb",
+        "minutes" : 553
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee7e"),
+        "name" : "Valery Korzun",
+        "minutes" : 1339
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee7f"),
+        "name" : "Yuri Romanenko",
+        "minutes" : 615
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee80"),
+        "name" : "Tom Marshburn",
+        "minutes" : 1469
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee81"),
+        "name" : "Bruce McCandless",
+        "minutes" : 725
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee82"),
+        "name" : "Mario Runco",
+        "minutes" : 268
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee83"),
+        "name" : "Victor Lazerov",
+        "minutes" : 0
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee84"),
+        "name" : "Bill Lenoir",
+        "minutes" : 0
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee85"),
+        "name" : "Greg Harbaugh",
+        "minutes" : 1109
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee86"),
+        "name" : "Eugene Cernan",
+        "minutes" : 1460
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee87"),
+        "name" : "Peggy Whitson",
+        "minutes" : 2386
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee88"),
+        "name" : "Valeri Tsibliyev",
+        "minutes" : 852
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee89"),
+        "name" : "Dan Barry",
+        "minutes" : 1549
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee8a"),
+        "name" : "Yuri Onufrienko",
+        "minutes" : 359
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee8b"),
+        "name" : "John Herrington",
+        "minutes" : 1195
+}
+{
+        "_id" : ObjectId("58d3c591d76e1709c612ee8c"),
+        "name" : "Anatoli Berezovsky",
+        "minutes" : 153
+}
+Type "it" for more
+> quit()
+vagrant@vagrant-ubuntu-trusty-64:~$ exit
+logout
+Connection to 127.0.0.1 closed.
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+$ exit

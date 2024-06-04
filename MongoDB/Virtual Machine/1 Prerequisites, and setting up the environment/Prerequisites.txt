@@ -1,0 +1,8 @@
+Install VirtualBox
+https://www.virtualbox.org/wiki/Downloads
+VirtualBox-5.1.14-112924-Win.exe
+
+
+Install Vagrant
+https://www.vagrantup.com/downloads.html
+vagrant_1.9.2.msi

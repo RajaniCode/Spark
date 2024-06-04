@@ -1,0 +1,12 @@
+The MongoDB connector provides a helper class in the Java API with which we read from or write to in Spark. What is the name of this class?
+
+Choose the best answer:
+
+[Single Answer]
+
+MongoSpeck
+JavaConnector
+MongoSpark
+SparkUmbilical
+
+Answer: MongoSpark

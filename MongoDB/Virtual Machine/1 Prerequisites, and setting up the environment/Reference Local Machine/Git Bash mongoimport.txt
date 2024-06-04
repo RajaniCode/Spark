@@ -1,0 +1,43 @@
+
+Git Bash # mongoimport
+
+Aspire@Acer MINGW64 ~
+$ mongod --version
+db version v3.2.8
+git version: ed70e33130c977bda0024c125b56d159573dbaf0
+OpenSSL version: OpenSSL 1.0.1p-fips 9 Jul 2015
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: 2008plus-ssl
+    distarch: x86_64
+    target_arch: x86_64
+
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment\Local"
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Loca
+$ mongoimport --headerline --file eva.csv --type csv --db nasa --collection eva
+2017-03-27T14:50:51.729+0530    connected to: localhost
+2017-03-27T14:50:52.523+0530    imported 375 documents
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Loca
+$ mongo
+MongoDB shell version: 3.2.8
+connecting to: test
+db.version()
+3.2.8
+show dbs
+local  0.000GB
+nasa   0.000GB
+use nasa
+switched to db nasa
+show collections
+eva
+db.eva.count()
+375
+quit()
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Loca
+$

@@ -1,0 +1,23 @@
+Run vagrant up from Vagrantfile folder
+
+
+For Vagrantfile-VirtualBox-Spark-Cluster-Java-Task, use its corresponding Vagrantfile folder in Vagrantfile-VirtualBox-Spark-Cluster-Java-Task
+
+For Vagrantfile-VirtualBox-Java-MongoDB-mongoimport-git-sbt-gitclone-jar, use its corresponding Vagrantfile folder in Vagrantfile-VirtualBox-Java-MongoDB-mongoimport-git-sbt-gitclone-jar
+
+For Vagrantfile-VirtualBox-Java-MongoDB-mongoimport, use its corresponding Vagrantfile-VirtualBox-Java-MongoDB-mongoimport
+
+For Vagrantfile-VirtualBox-Spark-Scala-RDDs-To-MongoDB, use its corresponding Vagrantfile folder in Vagrantfile-VirtualBox-Spark-Scala-RDDs-To-MongoDB
+
+For Vagrantfile-VirtualBox-Java-MongoDB-mongoimport-Scala, use its corresponding Vagrantfile folder in Vagrantfile-VirtualBox-Java-MongoDB-mongoimport-Scala
+
+
+Note: Restart Computer to Shutdown VirtualBox Interface
+
+Folder(s) in C:\Users\Aspire
+.vagrant.d
+.VirtualBox
+VirtualBox VMs
+
+Folder(s) in E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment
+Vagrantfile

@@ -1,0 +1,4266 @@
+﻿
+Aspire@Acer MINGW64 ~
+$ vagrant --version
+Vagrant 1.9.2
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment\Vagrantfile"
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Box 'ubuntu/trusty64' could not be found. Attempting to find and install...
+    default: Box Provider: virtualbox
+    default: Box Version: >= 0
+==> default: Loading metadata for box 'ubuntu/trusty64'
+    default: URL: https://atlas.hashicorp.com/ubuntu/trusty64
+==> default: Adding box 'ubuntu/trusty64' (v20170313.0.7) for provider: virtualbox
+    default: Downloading: https://atlas.hashicorp.com/ubuntu/boxes/trusty64/versions/20170313.0.7/providers/virtualbox.box
+    default:
+==> default: Successfully added box 'ubuntu/trusty64' (v20170313.0.7) for 'virtualbox'!
+==> default: Importing base box 'ubuntu/trusty64'...
+==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'ubuntu/trusty64' is up to date...
+==> default: Setting the name of the VM: Vagrantfile_default_1490362352302_24450
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 27017 (guest) => 27017 (host) (adapter 1)
+    default: 8080 (guest) => 8080 (host) (adapter 1)
+    default: 7077 (guest) => 7077 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Remote connection disconnect. Retrying...
+    default: Warning: Remote connection disconnect. Retrying...
+    default:
+    default: Vagrant insecure key detected. Vagrant will automatically replace
+    default: this with a newly generated keypair for better security.
+    default:
+    default: Inserting generated public key within guest...
+    default: Removing insecure key from the guest if it's present...
+    default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default:
+    default: Guest Additions Version: 4.3.36
+    default: VirtualBox Version: 5.1
+==> default: Mounting shared folders...
+    default: /vagrant => E:/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+==> default: Running provisioner: shell...
+    default: Running: inline script
+==> default: I am provisioning...
+==> default: Ign http://archive.ubuntu.com trusty InRelease
+==> default: Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+==> default: Get:2 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+==> default: Get:3 http://security.ubuntu.com trusty-security/main Sources [127 kB]
+==> default: Hit http://archive.ubuntu.com trusty-backports InRelease
+==> default: Hit http://archive.ubuntu.com trusty Release.gpg
+==> default: Get:4 http://archive.ubuntu.com trusty-updates/main Sources [393 kB]
+==> default: Get:5 http://security.ubuntu.com trusty-security/universe Sources [50.3 kB]
+==> default: Get:6 http://security.ubuntu.com trusty-security/main amd64 Packages [594 kB]
+==> default: Get:7 http://archive.ubuntu.com trusty-updates/restricted Sources [6,327 B]
+==> default: Get:8 http://security.ubuntu.com trusty-security/universe amd64 Packages [155 kB]
+==> default: Get:9 http://archive.ubuntu.com trusty-updates/universe Sources [175 kB]
+==> default: Get:10 http://security.ubuntu.com trusty-security/main Translation-en [325 kB]
+==> default: Get:11 http://archive.ubuntu.com trusty-updates/multiverse Sources [7,763 B]
+==> default: Get:12 http://security.ubuntu.com trusty-security/universe Translation-en [90.2 kB]
+==> default: Get:13 http://archive.ubuntu.com trusty-updates/main amd64 Packages [963 kB]
+==> default: Get:14 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.1 kB]
+==> default: Get:15 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [401 kB]
+==> default: Get:16 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.3 kB]
+==> default: Get:17 http://archive.ubuntu.com trusty-updates/main Translation-en [474 kB]
+==> default: Get:18 http://archive.ubuntu.com trusty-updates/multiverse Translation-en [7,430 B]
+==> default: Get:19 http://archive.ubuntu.com trusty-updates/restricted Translation-en [3,975 B]
+==> default: Get:20 http://archive.ubuntu.com trusty-updates/universe Translation-en [212 kB]
+==> default: Get:21 http://archive.ubuntu.com trusty-backports/main Sources [9,712 B]
+==> default: Get:22 http://archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+==> default: Get:23 http://archive.ubuntu.com trusty-backports/universe Sources [35.3 kB]
+==> default: Get:24 http://archive.ubuntu.com trusty-backports/multiverse Sources [1,898 B]
+==> default: Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty Release
+==> default: Get:25 http://archive.ubuntu.com trusty/main Sources [1,064 kB]
+==> default: Get:26 http://archive.ubuntu.com trusty/restricted Sources [5,433 B]
+==> default: Get:27 http://archive.ubuntu.com trusty/universe Sources [6,399 kB]
+==> default: Get:28 http://archive.ubuntu.com trusty/multiverse Sources [174 kB]
+==> default: Hit http://archive.ubuntu.com trusty/main amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/universe Translation-en
+==> default: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+==> default: Fetched 11.8 MB in 1min 27s (135 kB/s)
+==> default: Reading package lists...
+==> default: Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.Id3UtMA7KA --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+==> default: gpg:
+==> default: requesting key EA312927 from hkp server keyserver.ubuntu.com
+==> default: gpg:
+==> default: key EA312927: public key "MongoDB 3.2 Release Signing Key <packaging@mongodb.com>" imported
+==> default: gpg:
+==> default: Total number processed: 1
+==> default: gpg:
+==> default:               imported: 1  (RSA: 1)
+==> default: deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse
+==> default: deb https://dl.bintray.com/sbt/debian /
+==> default: Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.m4bG8fZAFR --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
+==> default: gpg:
+==> default: requesting key 642AC823 from hkp server keyserver.ubuntu.com
+==> default: gpg:
+==> default: key 642AC823: public key "sbt build tool <scalasbt@gmail.com>" imported
+==> default: gpg:
+==> default: Total number processed: 1
+==> default: gpg:
+==> default:               imported: 1
+==> default:   (RSA: 1)
+==> default:  Oracle Java (JDK) Installer (automatically downloads and installs Oracle JDK7 / JDK8 / JDK9). There are no actual Java files in this PPA.
+==> default:
+==> default: More info (and Ubuntu installation instructions):
+==> default: - for Oracle Java 7: http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+==> default: - for Oracle Java 8: http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html
+==> default:
+==> default: Debian installation instructions:
+==> default: - Oracle Java 7: http://www.webupd8.org/2012/06/how-to-install-oracle-java-7-in-debian.html
+==> default: - Oracle Java 8: http://www.webupd8.org/2014/03/how-to-install-oracle-java-8-in-debian.html
+==> default:
+==> default: Oracle Java 9 (for both Ubuntu and Debian): http://www.webupd8.org/2015/02/install-oracle-java-9-in-ubuntu-linux.html
+==> default:
+==> default: For JDK9, the PPA uses standard builds from: https://jdk9.java.net/download/ (and not the Jigsaw builds!).
+==> default:
+==> default: Important!!! For now, you should continue to use Java 8 because Oracle Java 9 is available as an early access release! You should only use Oracle Java 9 if you explicitly need it, because it may contain bugs and it might not include the latest security patches! Also, some Java options were removed in JDK9, so you may encounter issues with various Java apps. More information and installation instructions (Ubuntu / Linux Mint / Debian): http://www.webupd8.org/2015/02/install-oracle-java-9-in-ubuntu-linux.html
+==> default:  More info: https://launchpad.net/~webupd8team/+archive/ubuntu/java
+==> default: gpg:
+==> default: keyring `/tmp/tmp40wkj9iv/secring.gpg' created
+==> default: gpg:
+==> default: keyring `/tmp/tmp40wkj9iv/pubring.gpg' created
+==> default: gpg:
+==> default: requesting key EEA14886 from hkp server keyserver.ubuntu.com
+==> default: gpg:
+==> default: /tmp/tmp40wkj9iv/trustdb.gpg: trustdb created
+==> default: gpg:
+==> default: key EEA14886: public key "Launchpad VLC" imported
+==> default: gpg:
+==> default: no ultimately trusted keys found
+==> default: gpg:
+==> default: Total number processed: 1
+==> default: gpg:
+==> default:               imported: 1
+==> default:   (RSA: 1)
+==> default: OK
+==> default: Ign http://repo.mongodb.org trusty/mongodb-org/3.2 InRelease
+==> default: Hit http://security.ubuntu.com trusty-security InRelease
+==> default: Ign http://archive.ubuntu.com trusty InRelease
+==> default: Get:1 http://ppa.launchpad.net trusty InRelease [15.5 kB]
+==> default: Hit http://security.ubuntu.com trusty-security/main Sources
+==> default: Hit http://archive.ubuntu.com trusty-updates InRelease
+==> default: Get:2 http://repo.mongodb.org trusty/mongodb-org/3.2 Release.gpg [801 B]
+==> default: Hit http://security.ubuntu.com trusty-security/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports InRelease
+==> default: Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty Release.gpg
+==> default: Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+==> default: Get:3 http://repo.mongodb.org trusty/mongodb-org/3.2 Release [3,462 B]
+==> default: Hit http://archive.ubuntu.com trusty-updates/main Sources
+==> default: Get:4 http://ppa.launchpad.net trusty/main amd64 Packages [3,382 B]
+==> default: Hit http://security.ubuntu.com trusty-security/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+==> default: Hit http://security.ubuntu.com trusty-security/universe Translation-en
+==> default: Get:5 https://dl.bintray.com  InRelease
+==> default: Ign https://dl.bintray.com  InRelease
+==> default: Get:6 http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse amd64 Packages [9,508 B]
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe Sources
+==> default: Get:7 http://ppa.launchpad.net trusty/main Translation-en [1,556 B]
+==> default: Get:8 https://dl.bintray.com  Release.gpg
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+==> default: Get:9 https://dl.bintray.com  Release
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+==> default: Get:10 https://dl.bintray.com  Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+==> default: Get:11 https://dl.bintray.com  Translation-en_US
+==> default: Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+==> default: Ign http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse Translation-en_US
+==> default: Get:12 https://dl.bintray.com  Translation-en
+==> default: Ign http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse Translation-en
+==> default: Get:13 https://dl.bintray.com  Translation-en_US
+==> default: Get:14 https://dl.bintray.com  Translation-en
+==> default: Get:15 https://dl.bintray.com  Translation-en_US
+==> default: Get:16 https://dl.bintray.com  Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+==> default: Get:17 https://dl.bintray.com  Translation-en_US
+==> default: Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+==> default: Get:18 https://dl.bintray.com  Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/main Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+==> default: Get:19 https://dl.bintray.com  Translation-en_US
+==> default: Ign https://dl.bintray.com  Translation-en_US
+==> default: Get:20 https://dl.bintray.com  Translation-en
+==> default: Ign https://dl.bintray.com  Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+==> default: Hit http://archive.ubuntu.com trusty Release
+==> default: Hit http://archive.ubuntu.com trusty/main Sources
+==> default: Hit http://archive.ubuntu.com trusty/restricted Sources
+==> default: Hit http://archive.ubuntu.com trusty/universe Sources
+==> default: Hit http://archive.ubuntu.com trusty/multiverse Sources
+==> default: Hit http://archive.ubuntu.com trusty/main amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+==> default: Hit http://archive.ubuntu.com trusty/main Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/restricted Translation-en
+==> default: Hit http://archive.ubuntu.com trusty/universe Translation-en
+==> default: Ign http://archive.ubuntu.com trusty/main Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+==> default: Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+==> default: Fetched 37.5 kB in 19s (1,925 B/s)
+==> default: Reading package lists...
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: The following extra packages will be installed:
+==> default:   git-man gsfonts gsfonts-x11 java-common liberror-perl mongodb-org-mongos
+==> default:   mongodb-org-server mongodb-org-shell mongodb-org-tools
+==> default:   oracle-java9-installer oracle-java9-set-default
+==> default: Suggested packages:
+==> default:   git-daemon-run git-daemon-sysvinit git-doc git-el git-email git-gui gitk
+==> default:   gitweb git-arch git-bzr git-cvs git-mediawiki git-svn default-jre equivs
+==> default:   binfmt-support visualvm ttf-baekmuk ttf-unfonts ttf-unfonts-core
+==> default:   ttf-kochi-gothic ttf-sazanami-gothic ttf-kochi-mincho ttf-sazanami-mincho
+==> default:   ttf-arphic-uming firefox firefox-2 iceweasel mozilla-firefox iceape-browser
+==> default:   mozilla-browser epiphany-gecko epiphany-webkit epiphany-browser galeon
+==> default:   midbrowser moblin-web-browser xulrunner xulrunner-1.9 konqueror
+==> default:   chromium-browser midori google-chrome
+==> default: The following NEW packages will be installed:
+==> default:   git git-man gsfonts gsfonts-x11 java-common liberror-perl mongodb-org
+==> default:   mongodb-org-mongos mongodb-org-server mongodb-org-shell mongodb-org-tools
+==> default:   oracle-java9-installer oracle-java9-set-default sbt
+==> default: 0 upgraded, 14 newly installed, 0 to remove and 0 not upgraded.
+==> default: Need to get 58.3 MB of archives.
+==> default: After this operation, 239 MB of additional disk space will be used.
+==> default: Get:1 http://archive.ubuntu.com/ubuntu/ trusty/main java-common all 0.51 [130 kB]
+==> default: Get:2 http://ppa.launchpad.net/webupd8team/java/ubuntu/ trusty/main oracle-java9-installer all 9b158+9b158arm-1~webupd8~0 [30.7 kB]
+==> default: Get:3 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.2/multiverse mongodb-org-shell amd64 3.2.12 [5,262 kB]
+==> default: Err http://ppa.launchpad.net/webupd8team/java/ubuntu/ trusty/main oracle-java9-set-default all 9b158+9b158arm-1~webupd8~0
+==> default:   Connection failed
+==> default: Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main liberror-perl all 0.17-1.1 [21.1 kB]
+==> default: Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main git-man all 1:1.9.1-1ubuntu0.4 [699 kB]
+==> default: Get:6 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.2/multiverse mongodb-org-server amd64 3.2.12 [9,615 kB]
+==> default: Get:7 https://dl.bintray.com/sbt/debian/  sbt 0.13.13 [1,034 kB]
+==> default: Get:8 http://archive.ubuntu.com/ubuntu/ trusty-updates/main git amd64 1:1.9.1-1ubuntu0.4 [2,343 kB]
+==> default: Get:9 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.2/multiverse mongodb-org-mongos amd64 3.2.12 [4,360 kB]
+==> default: Get:10 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.2/multiverse mongodb-org-tools amd64 3.2.12 [31.4 MB]
+==> default: Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main gsfonts all 1:8.11+urwcyr1.0.7~pre44-4.2ubuntu1 [3,374 kB]
+==> default: Get:12 http://repo.mongodb.org/apt/ubuntu/ trusty/mongodb-org/3.2/multiverse mongodb-org amd64 3.2.12 [3,560 B]
+==> default: Get:13 http://archive.ubuntu.com/ubuntu/ trusty/main gsfonts-x11 all 0.22 [9,108 B]
+==> default: Fetched 58.3 MB in 1min 25s (682 kB/s)
+==> default: E
+==> default: :
+==> default: Failed to fetch http://ppa.launchpad.net/webupd8team/java/ubuntu/pool/main/o/oracle-java9-installer/oracle-java9-set-default_9b158+9b158arm-1~webupd8~0_all.deb  Connection failed
+==> default: E
+==> default: : Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default: Reading state information...
+==> default: The following extra packages will be installed:
+==> default:   gsfonts gsfonts-x11 java-common oracle-java8-set-default
+==> default: Suggested packages:
+==> default:   default-jre equivs binfmt-support visualvm ttf-baekmuk ttf-unfonts
+==> default:   ttf-unfonts-core ttf-kochi-gothic ttf-sazanami-gothic ttf-kochi-mincho
+==> default:   ttf-sazanami-mincho ttf-arphic-uming firefox firefox-2 iceweasel
+==> default:   mozilla-firefox iceape-browser mozilla-browser epiphany-gecko
+==> default:   epiphany-webkit epiphany-browser galeon midbrowser moblin-web-browser
+==> default:   xulrunner xulrunner-1.9 konqueror chromium-browser midori google-chrome
+==> default: The following NEW packages will be installed:
+==> default:   gsfonts gsfonts-x11 java-common oracle-java8-installer
+==> default:   oracle-java8-set-default
+==> default: 0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+==> default: Need to get 39.5 kB/3,553 kB of archives.
+==> default: After this operation, 5,434 kB of additional disk space will be used.
+==> default: Get:1 http://ppa.launchpad.net/webupd8team/java/ubuntu/ trusty/main oracle-java8-installer all 8u121-1~webupd8~2 [32.9 kB]
+==> default: Get:2 http://ppa.launchpad.net/webupd8team/java/ubuntu/ trusty/main oracle-java8-set-default all 8u121-1~webupd8~2 [6,612 B]
+==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+==> default: Fetched 39.5 kB in 1s (29.4 kB/s)
+==> default: Selecting previously unselected package java-common.
+==> default: (Reading database ... 63125 files and directories currently installed.)
+==> default: Preparing to unpack .../java-common_0.51_all.deb ...
+==> default: Unpacking java-common (0.51) ...
+==> default: Selecting previously unselected package oracle-java8-installer.
+==> default: Preparing to unpack .../oracle-java8-installer_8u121-1~webupd8~2_all.deb ...
+==> default: oracle-license-v1-1 license has already been accepted
+==> default: Unpacking oracle-java8-installer (8u121-1~webupd8~2) ...
+==> default: Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+==> default: Processing triggers for hicolor-icon-theme (0.13-1) ...
+==> default: Processing triggers for shared-mime-info (1.2-0ubuntu3) ...
+==> default: Processing triggers for mime-support (3.54ubuntu1.1) ...
+==> default: Setting up java-common (0.51) ...
+==> default: Setting up oracle-java8-installer (8u121-1~webupd8~2) ...
+==> default: No /var/cache/oracle-jdk8-installer/wgetrc file found.
+==> default: Creating /var/cache/oracle-jdk8-installer/wgetrc and
+==> default: using default oracle-java8-installer wgetrc settings for it.
+==> default: Downloading Oracle Java 8...
+==> default: --2017-03-24 13:37:18--  http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.tar.gz
+==> default: Resolving download.oracle.com (download.oracle.com)...
+==> default: 23.211.135.102
+==> default: ,
+==> default: 23.211.135.43
+==> default: Connecting to download.oracle.com (download.oracle.com)|23.211.135.102|:80...
+==> default: connected.
+==> default: HTTP request sent, awaiting response...
+==> default: 302 Moved Temporarily
+==> default: Location: https://edelivery.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.tar.gz [following]
+==> default: --2017-03-24 13:37:19--  https://edelivery.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.tar.gz
+==> default: Resolving edelivery.oracle.com (edelivery.oracle.com)...
+==> default: 184.31.208.103
+==> default: ,
+==> default: 2600:140f:b:184::2d3e
+==> default: ,
+==> default: 2600:140f:b:183::2d3e
+==> default: Connecting to edelivery.oracle.com (edelivery.oracle.com)|184.31.208.103|:443...
+==> default: connected.
+==> default: HTTP request sent, awaiting response...
+==> default: 302 Moved Temporarily
+==> default: Location: http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.tar.gz?AuthParam=1490362760_a756ff2c4b2869b5c9d7006e465fa6cc [following]
+==> default: --2017-03-24 13:37:21--  http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/jdk-8u121-linux-x64.tar.gz?AuthParam=1490362760_a756ff2c4b2869b5c9d7006e465fa6cc
+==> default: Connecting to download.oracle.com (download.oracle.com)|23.211.135.102|:80...
+==> default: connected.
+==> default: HTTP request sent, awaiting response...
+==> default: 200 OK
+==> default: Length:
+==> default: 183246769
+==> default:  (175M)
+==> default:  [application/x-gzip]
+==> default: Saving to: ‘jdk-8u121-linux-x64.tar.gz’
+==> default:
+==> default:      0K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:   1%
+==> default:   136K
+==> default:  21m37s
+==> default:
+==> default:   3072K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:   3%
+==> default:   938K
+==> default:  12m9s
+==> default:
+==> default:   6144K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:   5%
+==> default:  1.25M
+==> default:  8m42s
+==> default:
+==> default:   9216K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:   6%
+==> default:  1.19M
+==> default:  6m59s
+==> default:
+==> default:  12288K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:   8%
+==> default:   244K
+==> default:  7m43s
+==> default:
+==> default:  15360K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  10%
+==> default:   279K
+==> default:  7m55s
+==> default:
+==> default:  18432K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  12%
+==> default:   186K
+==> default:  8m40s
+==> default:
+==> default:  21504K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  13%
+==> default:   269K
+==> default:  8m38s
+==> default:
+==> default:  24576K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  15%
+==> default:   321K
+==> default:  8m24s
+==> default:
+==> default:  27648K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  17%
+==> default:   680K
+==> default:  7m46s
+==> default:
+==> default:  30720K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  18%
+==> default:   618K
+==> default:  7m16s
+==> default:
+==> default:  33792K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  20%
+==> default:   640K
+==> default:  6m50s
+==> default:
+==> default:  36864K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  22%
+==> default:   455K
+==> default:  6m34s
+==> default:
+==> default:  39936K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  24%
+==> default:   447K
+==> default:  6m19s
+==> default:
+==> default:  43008K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  25%
+==> default:   622K
+==> default:  6m0s
+==> default:
+==> default:  46080K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  27%
+==> default:   456K
+==> default:  5m48s
+==> default:
+==> default:  49152K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  29%
+==> default:   360K
+==> default:  5m40s
+==> default:
+==> default:  52224K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  30%
+==> default:   409K
+==> default:  5m30s
+==> default:
+==> default:  55296K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  32%
+==> default:   253K
+==> default:  5m30s
+==> default:
+==> default:  58368K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  34%
+==> default:   326K
+==> default:  5m24s
+==> default:
+==> default:  61440K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  36%
+==> default:   367K
+==> default:  5m15s
+==> default:
+==> default:  64512K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  37%
+==> default:   478K
+==> default:  5m3s
+==> default:
+==> default:  67584K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  39%
+==> default:   475K
+==> default:  4m52s
+==> default:
+==> default:  70656K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  41%
+==> default:   255K
+==> default:  4m49s
+==> default:
+==> default:  73728K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  42%
+==> default:   886K
+==> default:  4m34s
+==> default:
+==> default:  76800K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  44%
+==> default:   587K
+==> default:  4m22s
+==> default:
+==> default:  79872K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  46%
+==> default:   363K
+==> default:  4m14s
+==> default:
+==> default:  82944K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  48%
+==> default:   773K
+==> default:  4m2s
+==> default:
+==> default:  86016K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  49%
+==> default:  1.02M
+==> default:  3m49s
+==> default:
+==> default:  89088K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  51%
+==> default:   441K
+==> default:  3m40s
+==> default:
+==> default:  92160K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  53%
+==> default:   468K
+==> default:  3m31s
+==> default:
+==> default:  95232K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  54%
+==> default:   973K
+==> default:  3m20s
+==> default:
+==> default:  98304K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  56%
+==> default:  1.85M
+==> default:  3m7s
+==> default:
+==> default: 101376K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  58%
+==> default:   633K
+==> default:  2m58s
+==> default:
+==> default: 104448K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  60%
+==> default:  1.49M
+==> default:  2m47s
+==> default:
+==> default: 107520K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  61%
+==> default:  1.99M
+==> default:  2m37s
+==> default:
+==> default: 110592K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  63%
+==> default:  2.22M
+==> default:  2m26s
+==> default:
+==> default: 113664K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  65%
+==> default:  2.40M
+==> default:  2m16s
+==> default:
+==> default: 116736K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  66%
+==> default:   537K
+==> default:  2m9s
+==> default:
+==> default: 119808K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  68%
+==> default:   446K
+==> default:  2m3s
+==> default:
+==> default: 122880K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  70%
+==> default:   642K
+==> default:  1m55s
+==> default:
+==> default: 125952K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  72%
+==> default:   516K
+==> default:  1m48s
+==> default:
+==> default: 129024K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  73%
+==> default:   579K
+==> default:  1m41s
+==> default:
+==> default: 132096K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  75%
+==> default:   734K
+==> default:  94s
+==> default:
+==> default: 135168K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  77%
+==> default:  1.23M
+==> default:  86s
+==> default:
+==> default: 138240K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  78%
+==> default:   874K
+==> default:  79s
+==> default:
+==> default: 141312K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  80%
+==> default:  1.16M
+==> default:  71s
+==> default:
+==> default: 144384K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  82%
+==> default:   813K
+==> default:  64s
+==> default:
+==> default: 147456K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  84%
+==> default:   749K
+==> default:  58s
+==> default:
+==> default: 150528K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  85%
+==> default:  1.86M
+==> default:  51s
+==> default:
+==> default: 153600K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  87%
+==> default:  1.19M
+==> default:  44s
+==> default:
+==> default: 156672K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  89%
+==> default:   260K
+==> default:  39s
+==> default:
+==> default: 159744K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  90%
+==> default:   333K
+==> default:  33s
+==> default:
+==> default: 162816K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  92%
+==> default:   468K
+==> default:  27s
+==> default:
+==> default: 165888K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  94%
+==> default:   730K
+==> default:  20s
+==> default:
+==> default: 168960K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  96%
+==> default:   352K
+==> default:  14s
+==> default:
+==> default: 172032K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  97%
+==> default:   337K
+==> default:  8s
+==> default:
+==> default: 175104K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:  99%
+==> default:   565K
+==> default:  2s
+==> default:
+==> default: 178176K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default:
+==> default:
+==> default:
+==> default:
+==> default:
+==> default:
+==> default:
+==> default:
+==> default:
+==> default:                               100%  555K=6m6s
+==> default:
+==> default: 2017-03-24 13:43:27 (489 KB/s) - ‘jdk-8u121-linux-x64.tar.gz’ saved [183246769/183246769]
+==> default: Download done.
+==> default: Removing outdated cached downloads...
+==> default: update-alternatives: error:
+==> default: no alternatives for java
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/ControlPanel to provide /usr/bin/ControlPanel (ControlPanel) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/java to provide /usr/bin/java (java) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/javaws to provide /usr/bin/javaws (javaws) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/jcontrol to provide /usr/bin/jcontrol (jcontrol) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/orbd to provide /usr/bin/orbd (orbd) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/policytool to provide /usr/bin/policytool (policytool) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/servertool to provide /usr/bin/servertool (servertool) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/tnameserv to provide /usr/bin/tnameserv (tnameserv) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/appletviewer to provide /usr/bin/appletviewer (appletviewer) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/extcheck to provide /usr/bin/extcheck (extcheck) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/idlj to provide /usr/bin/idlj (idlj) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jar to provide /usr/bin/jar (jar) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/javac to provide /usr/bin/javac (javac) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/javafxpackager to provide /usr/bin/javafxpackager (javafxpackager) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/javah to provide /usr/bin/javah (javah) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/javap to provide /usr/bin/javap (javap) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/javapackager to provide /usr/bin/javapackager (javapackager) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jhat to provide /usr/bin/jhat (jhat) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jmc to provide /usr/bin/jmc (jmc) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jps to provide /usr/bin/jps (jps) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jsadebugd to provide /usr/bin/jsadebugd (jsadebugd) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/jvisualvm to provide /usr/bin/jvisualvm (jvisualvm) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/native2ascii to provide /usr/bin/native2ascii (native2ascii) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/rmic to provide /usr/bin/rmic (rmic) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/schemagen to provide /usr/bin/schemagen (schemagen) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/wsgen to provide /usr/bin/wsgen (wsgen) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/wsimport to provide /usr/bin/wsimport (wsimport) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/bin/xjc to provide /usr/bin/xjc (xjc) in auto mode
+==> default: update-alternatives:
+==> default: using /usr/lib/jvm/java-8-oracle/jre/lib/amd64/libnpjp2.so to provide /usr/lib/mozilla/plugins/libjavaplugin.so (mozilla-javaplugin.so) in auto mode
+==> default: Oracle JRE 8 browser plugin installed
+==> default: Oracle JDK 8 installed
+==> default: #####Important########
+==> default: To set Oracle JDK8 as default, install the "oracle-java8-set-default" package.
+==> default: E.g.: sudo apt install oracle-java8-set-default
+==> default: On Ubuntu systems, oracle-java8-set-default is most probably installed
+==> default: automatically with this package.
+==> default: ######################
+==> default: Selecting previously unselected package oracle-java8-set-default.
+==> default: (Reading database ... 63201 files and directories currently installed.)
+==> default: Preparing to unpack .../oracle-java8-set-default_8u121-1~webupd8~2_all.deb ...
+==> default: Unpacking oracle-java8-set-default (8u121-1~webupd8~2) ...
+==> default: Selecting previously unselected package gsfonts.
+==> default: Preparing to unpack .../gsfonts_1%3a8.11+urwcyr1.0.7~pre44-4.2ubuntu1_all.deb ...
+==> default: Unpacking gsfonts (1:8.11+urwcyr1.0.7~pre44-4.2ubuntu1) ...
+==> default: Selecting previously unselected package gsfonts-x11.
+==> default: Preparing to unpack .../gsfonts-x11_0.22_all.deb ...
+==> default: Unpacking gsfonts-x11 (0.22) ...
+==> default: Processing triggers for fontconfig (2.11.0-0ubuntu4.2) ...
+==> default: Setting up oracle-java8-set-default (8u121-1~webupd8~2) ...
+==> default: Setting up gsfonts (1:8.11+urwcyr1.0.7~pre44-4.2ubuntu1) ...
+==> default: Setting up gsfonts-x11 (0.22) ...
+==> default: Downloading Spark...
+==> default: Downloading and building course examples...
+==> default: /tmp/vagrant-shell: line 25: git: command not found
+==> default: chown:
+==> default: cannot access ‘MongoDB_Spark_Course’
+==> default: : No such file or directory
+==> default: /tmp/vagrant-shell: line 27: cd: MongoDB_Spark_Course: No such file or directory
+==> default: chmod:
+==> default: cannot access ‘gradlew*’
+==> default: : No such file or directory
+==> default: /tmp/vagrant-shell: line 29: ./gradlew: No such file or directory
+==> default: Loading dataset
+==> default: --2017-03-24 13:49:46--  https://data.nasa.gov/api/views/9kcy-zwvn/rows.csv?accessType=DOWNLOAD
+==> default: Resolving data.nasa.gov (data.nasa.gov)...
+==> default: 128.102.186.77, 2001:4d0:6311:2c05:60b0:5ad8:1210:ea07
+==> default: Connecting to data.nasa.gov (data.nasa.gov)|128.102.186.77|:443...
+==> default: connected.
+==> default: HTTP request sent, awaiting response...
+==> default: 200 OK
+==> default: Length:
+==> default: unspecified
+==> default:  [text/csv]
+==> default: Saving to: ‘eva.csv’
+==> default:
+==> default:      0K
+==> default:
+==> default: .
+==> default: .
+==> default: ........ .......... .......... .......... .......
+==> default: .
+==> default: .
+==> default: .
+==> default:   103K
+==> default:
+==> default:     50K
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: ..
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: ..
+==> default: .
+==> default: .
+==> default: ..... .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: ...
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default: .
+==> default:
+==> default:      188K=0.7s
+==> default:
+==> default: 2017-03-24 13:49:52 (131 KB/s) - ‘eva.csv’ saved [98605]
+==> default: /tmp/vagrant-shell: line 34: mongoimport: command not found
+The SSH command responded with a non-zero exit status. Vagrant
+assumes that this means the command failed. The output for this command
+should be in the log above. Please read the output to determine what
+went wrong.
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+$ vagrant ssh
+Welcome to Ubuntu 14.04.5 LTS (GNU/Linux 3.13.0-113-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com/
+
+ System information disabled due to load higher than 1.0
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+New release '16.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ java -version
+java version "1.8.0_121"
+Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
+vagrant@vagrant-ubuntu-trusty-64:~$ mongod --version
+The program 'mongod' is currently not installed. To run 'mongod' please ask your administrator to install the package 'mongodb-server'
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.oLboVY22Uh --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyring /etc/apt/trusted.gpg.d/webupd8team-java.gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+gpg: requesting key 7F0CEB10 from hkp server keyserver.ubuntu.com
+gpg: key 7F0CEB10: public key "Richard Kreuter <richard@10gen.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt-get update
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Get:2 https://dl.bintray.com  InRelease
+Ign https://dl.bintray.com  InRelease
+Hit http://ppa.launchpad.net trusty InRelease
+Ign http://archive.ubuntu.com trusty InRelease
+Hit https://dl.bintray.com  Release.gpg
+Hit http://ppa.launchpad.net trusty/main amd64 Packages
+Get:3 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://ppa.launchpad.net trusty/main Translation-en
+Get:4 http://security.ubuntu.com trusty-security/main Sources [127 kB]
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://archive.ubuntu.com trusty Release.gpg
+Get:5 http://archive.ubuntu.com trusty-updates/main Sources [393 kB]
+Get:6 http://security.ubuntu.com trusty-security/universe Sources [50.3 kB]
+Get:7 http://security.ubuntu.com trusty-security/main amd64 Packages [594 kB]
+Hit https://dl.bintray.com  Release
+Get:8 http://archive.ubuntu.com trusty-updates/restricted Sources [6,327 B]
+Get:9 http://archive.ubuntu.com trusty-updates/universe Sources [175 kB]
+Get:10 http://archive.ubuntu.com trusty-updates/multiverse Sources [7,763 B]
+Get:11 http://archive.ubuntu.com trusty-updates/main amd64 Packages [963 kB]
+Get:12 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [17.1 kB]
+Get:13 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [401 kB]
+Get:14 http://security.ubuntu.com trusty-security/universe amd64 Packages [155 kB]
+Get:15 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.3 kB]
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit https://dl.bintray.com  Packages
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Get:16 https://dl.bintray.com  Translation-en_US
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Get:17 https://dl.bintray.com  Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Get:18 https://dl.bintray.com  Translation-en_US
+Hit http://archive.ubuntu.com trusty Release
+Hit http://archive.ubuntu.com trusty/main Sources
+Get:19 https://dl.bintray.com  Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Sources
+Hit http://archive.ubuntu.com trusty/universe Sources
+Get:20 https://dl.bintray.com  Translation-en_US
+Hit http://archive.ubuntu.com trusty/multiverse Sources
+Get:21 https://dl.bintray.com  Translation-en
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Get:22 https://dl.bintray.com  Translation-en_US
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Get:23 https://dl.bintray.com  Translation-en
+Get:24 https://dl.bintray.com  Translation-en_US
+Ign https://dl.bintray.com  Translation-en_US
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Get:25 https://dl.bintray.com  Translation-en
+Ign https://dl.bintray.com  Translation-en
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Ign http://repo.mongodb.org trusty/mongodb-org/3.0 InRelease
+Ign http://repo.mongodb.org trusty/mongodb-org/3.2 InRelease
+Get:26 http://repo.mongodb.org trusty/mongodb-org/3.0 Release.gpg [455 B]
+Hit http://repo.mongodb.org trusty/mongodb-org/3.2 Release.gpg
+Get:27 http://repo.mongodb.org trusty/mongodb-org/3.0 Release [3,462 B]
+Hit http://repo.mongodb.org trusty/mongodb-org/3.2 Release
+Get:28 http://repo.mongodb.org trusty/mongodb-org/3.0/multiverse amd64 Packages [10.7 kB]
+Hit http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse amd64 Packages
+Ign http://repo.mongodb.org trusty/mongodb-org/3.0/multiverse Translation-en_US
+Ign http://repo.mongodb.org trusty/mongodb-org/3.0/multiverse Translation-en
+Ign http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse Translation-en_US
+Ign http://repo.mongodb.org trusty/mongodb-org/3.2/multiverse Translation-en
+Fetched 3,051 kB in 45s (67.2 kB/s)
+Reading package lists... Done
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt-get install -y mongodb-org
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+  mongodb-org-mongos mongodb-org-server mongodb-org-shell mongodb-org-tools
+The following NEW packages will be installed:
+  mongodb-org mongodb-org-mongos mongodb-org-server mongodb-org-shell
+  mongodb-org-tools
+0 upgraded, 5 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/50.6 MB of archives.
+After this operation, 210 MB of additional disk space will be used.
+Selecting previously unselected package mongodb-org-shell.
+(Reading database ... 63366 files and directories currently installed.)
+Preparing to unpack .../mongodb-org-shell_3.2.12_amd64.deb ...
+Unpacking mongodb-org-shell (3.2.12) ...
+Selecting previously unselected package mongodb-org-server.
+Preparing to unpack .../mongodb-org-server_3.2.12_amd64.deb ...
+Unpacking mongodb-org-server (3.2.12) ...
+Selecting previously unselected package mongodb-org-mongos.
+Preparing to unpack .../mongodb-org-mongos_3.2.12_amd64.deb ...
+Unpacking mongodb-org-mongos (3.2.12) ...
+Selecting previously unselected package mongodb-org-tools.
+Preparing to unpack .../mongodb-org-tools_3.2.12_amd64.deb ...
+Unpacking mongodb-org-tools (3.2.12) ...
+Selecting previously unselected package mongodb-org.
+Preparing to unpack .../mongodb-org_3.2.12_amd64.deb ...
+Unpacking mongodb-org (3.2.12) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up mongodb-org-shell (3.2.12) ...
+Setting up mongodb-org-server (3.2.12) ...
+Adding system user `mongodb' (UID 109) ...
+Adding new user `mongodb' (UID 109) with group `nogroup' ...
+Not creating home directory `/home/mongodb'.
+Adding group `mongodb' (GID 115) ...
+Done.
+Adding user `mongodb' to group `mongodb' ...
+Adding user mongodb to group mongodb
+Done.
+mongod start/running, process 4091
+Setting up mongodb-org-mongos (3.2.12) ...
+Setting up mongodb-org-tools (3.2.12) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Setting up mongodb-org (3.2.12) ...
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ mongod --version
+db version v3.2.12
+git version: ef3e1bc78e997f0d9f22f45aeb1d8e3b6ac14a14
+OpenSSL version: OpenSSL 1.0.1f 6 Jan 2014
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: ubuntu1404
+    distarch: x86_64
+    target_arch: x86_64
+vagrant@vagrant-ubuntu-trusty-64:~$ wget https://data.nasa.gov/api/views/9kcy-zwvn/rows.csv?accessType=DOWNLOAD -O eva.csv
+--2017-03-24 14:43:06--  https://data.nasa.gov/api/views/9kcy-zwvn/rows.csv?accessType=DOWNLOAD
+Resolving data.nasa.gov (data.nasa.gov)... 128.102.186.77, 2001:4d0:6311:2c05:60b0:5ad8:1210:ea07
+Connecting to data.nasa.gov (data.nasa.gov)|128.102.186.77|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/csv]
+Saving to: ‘eva.csv’
+
+    [    <=>                                                                                                                                              ] 98,605       128KB/s   in 0.8s
+
+2017-03-24 14:43:12 (128 KB/s) - ‘eva.csv’ saved [98605]
+
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+eva.csv  spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ mongoimport --headerline --file eva.csv --type csv --db nasa --collection eva
+2017-03-24T14:43:27.257+0000    connected to: localhost
+2017-03-24T14:43:27.324+0000    imported 375 documents
+vagrant@vagrant-ubuntu-trusty-64:~$ mongo
+MongoDB shell version: 3.2.12
+connecting to: test
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        http://docs.mongodb.org/
+Questions? Try the support group
+        http://groups.google.com/group/mongodb-user
+Server has startup warnings:
+2017-03-24T14:42:17.759+0000 I CONTROL  [initandlisten]
+2017-03-24T14:42:17.760+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2017-03-24T14:42:17.760+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-03-24T14:42:17.760+0000 I CONTROL  [initandlisten]
+2017-03-24T14:42:17.760+0000 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2017-03-24T14:42:17.760+0000 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2017-03-24T14:42:17.760+0000 I CONTROL  [initandlisten]
+> db.version()
+3.2.12
+> show databases
+local  0.000GB
+nasa   0.000GB
+> use nasa
+switched to db nasa
+> show collections
+eva
+> db.eva.count()
+375
+> quit()
+vagrant@vagrant-ubuntu-trusty-64:~$ ls
+eva.csv  spark-1.6.1  spark-1.6.1.tgz
+vagrant@vagrant-ubuntu-trusty-64:~$ exit
+logout
+Connection to 127.0.0.1 closed.
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/MongoDB University/2016/M233 Getting Started with Spark and MongoDB/Units/Spark and MongoDB/1 Welcome, prerequisites, and setting up your learning environment/Vagrantfile
+$ exit

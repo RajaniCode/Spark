@@ -1,0 +1,55 @@
+$ vagrant --version
+
+$ cd "E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment\Vagrantfile"
+
+$ vagrant up
+
+$ vagrant ssh
+
+$ ls
+
+$ sudo apt-get update
+
+$ ls
+
+$ sudo apt-get install -y git
+
+$ ls
+
+$ git --version
+
+$ sudo apt-get update
+
+$ ls
+
+$ sudo apt-get install -y sbt
+
+$ ls
+
+$ sbt -help
+
+$ sudo apt-get update
+
+$ ls
+
+$ git clone https://github.com/breinero/MongoDB_Spark_Course.git
+
+$ ls
+
+$ sudo chown -R vagrant:vagrant MongoDB_Spark_Course
+
+$ cd MongoDB_Spark_Course
+
+$ chmod 755 gradlew*
+
+$ ./gradlew jar
+
+$ cd ~
+
+$ ls MongoDB_Spark_Course
+
+$ cat MongoDB_Spark_Course/gradlew
+
+$ ls MongoDB_Spark_Course/build/
+
+$ ls MongoDB_Spark_Course/build/libs/

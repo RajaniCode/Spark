@@ -1,0 +1,19 @@
+Based on the following --conf parameters, what namespace will this Spark process read from. Which namespace will it write to?
+
+"profiles.users"
+"logs.events"
+
+./bin/spark-shell
+--conf "spark.mongodb.input.uri=mongodb://127.0.0.1/profiles.users"
+--conf "spark.mongodb.output.uri=mongodb://127.0.0.1/logs.events"
+
+Choose the best answer:
+
+[Single Answer]
+
+Read from logs.events, write to profiles.users
+Read from profiles.users, write to logs.events
+Read from profiles.user, write to profiles.users
+
+Answer: Read from profiles.users, write to logs.events
+

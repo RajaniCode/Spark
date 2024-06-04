@@ -1,0 +1,17 @@
+$ vagrant --version
+
+$ cd "E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment\Vagrantfile"
+
+$ vagrant up
+
+$ vagrant ssh
+
+$ scala -version
+
+$ ls
+
+# Spark Home
+$ ls spark-1.6.1/
+
+# Spark Binaries
+$ ls spark-1.6.1/bin/

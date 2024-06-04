@@ -1,0 +1,105 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ mongod --version
+db version v3.2.8
+git version: ed70e33130c977bda0024c125b56d159573dbaf0
+OpenSSL version: OpenSSL 1.0.1p-fips 9 Jul 2015
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: 2008plus-ssl
+    distarch: x86_64
+    target_arch: x86_64
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\MongoDB\Spark"
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/Spark
+$ mkdir -p WTSparkShellScala
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/Spark
+$ mongod -dbpath WTSparkShellScala --storageEngine wiredTiger
+2017-03-27T20:08:18.898+0530 I CONTROL  [initandlisten] MongoDB starting : pid=5196 port=27017 dbpath=WTSparkShellScala 64-bit host=Acer
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten] db version v3.2.8
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten] git version: ed70e33130c977bda0024c125b56d159573dbaf0
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1p-fips 9 Jul 2015
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten] modules: none
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten] build environment:
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-03-27T20:08:18.899+0530 I CONTROL  [initandlisten] options: { storage: { dbPath: "WTSparkShellScala", engine: "wiredTiger" } }
+2017-03-27T20:08:18.901+0530 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=1G,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-03-27T20:08:19.713+0530 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2017-03-27T20:08:19.714+0530 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'WTSparkShellScala/diagnostic.data'
+2017-03-27T20:08:19.958+0530 I NETWORK  [initandlisten] waiting for connections on port 27017
+2017-03-27T20:08:58.070+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51984 #1 (1 connection now open)
+2017-03-27T20:09:03.471+0530 I NETWORK  [conn1] end connection 127.0.0.1:51984 (0 connections now open)
+2017-03-27T20:09:52.785+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51991 #2 (1 connection now open)
+2017-03-27T20:09:53.186+0530 I COMMAND  [conn2] command nasa.eva command: insert { insert: "eva", documents: 375, writeConcern: { getLastError: 1, w: 1 }, ordered: false } ninserted:375 keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { r: 7, w: 7 } }, Database: { acquireCount: { w: 6, W: 1 } }, Collection: { acquireCount: { w: 5, W: 1 } } } protocol:op_query 240ms
+2017-03-27T20:09:53.195+0530 I NETWORK  [conn2] end connection 127.0.0.1:51991 (0 connections now open)
+2017-03-27T20:10:18.677+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:51992 #3 (1 connection now open)
+2017-03-27T20:10:54.446+0530 I NETWORK  [conn3] end connection 127.0.0.1:51992 (0 connections now open)
+2017-03-27T20:45:22.246+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52226 #4 (1 connection now open)
+2017-03-27T20:45:22.360+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52227 #5 (2 connections now open)
+2017-03-27T20:45:23.876+0530 I COMMAND  [conn5] command nasa.eva command: aggregate { aggregate: "eva", pipeline: [ { $match: { _id: { $gte: MinKey, $lt: MaxKey } } } ], cursor: {} } cursorid:13212116086 keyUpdates:0 writeConflicts:0 numYields:4 reslen:28983 locks:{ Global: { acquireCount: { r: 14 } }, Database: { acquireCount: { r: 7 } }, Collection: { acquireCount: { r: 7 } } } protocol:op_query 302ms
+2017-03-27T20:45:28.976+0530 I NETWORK  [conn5] end connection 127.0.0.1:52227 (1 connection now open)
+2017-03-27T20:45:28.977+0530 I NETWORK  [conn4] end connection 127.0.0.1:52226 (0 connections now open)
+2017-03-27T20:45:30.250+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52229 #6 (1 connection now open)
+2017-03-27T20:45:30.260+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52230 #7 (2 connections now open)
+2017-03-27T20:45:30.320+0530 I COMMAND  [conn7] killcursors nasa.eva keyUpdates:0 writeConflicts:0 numYields:0 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } 31ms
+2017-03-27T20:45:35.373+0530 I NETWORK  [conn7] end connection 127.0.0.1:52230 (1 connection now open)
+2017-03-27T20:45:35.373+0530 I NETWORK  [conn6] end connection 127.0.0.1:52229 (0 connections now open)
+2017-03-27T20:45:40.041+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52231 #8 (1 connection now open)
+2017-03-27T20:45:40.049+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52232 #9 (2 connections now open)
+2017-03-27T20:45:45.173+0530 I NETWORK  [conn9] end connection 127.0.0.1:52232 (1 connection now open)
+2017-03-27T20:45:45.174+0530 I NETWORK  [conn8] end connection 127.0.0.1:52231 (0 connections now open)
+2017-03-27T20:47:25.245+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52237 #10 (1 connection now open)
+2017-03-27T20:47:25.251+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52238 #11 (2 connections now open)
+2017-03-27T20:47:30.373+0530 I NETWORK  [conn11] end connection 127.0.0.1:52238 (1 connection now open)
+2017-03-27T20:47:30.374+0530 I NETWORK  [conn10] end connection 127.0.0.1:52237 (0 connections now open)
+2017-03-27T20:48:08.171+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52241 #12 (1 connection now open)
+2017-03-27T20:48:08.182+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52242 #13 (2 connections now open)
+2017-03-27T20:48:13.274+0530 I NETWORK  [conn13] end connection 127.0.0.1:52242 (1 connection now open)
+2017-03-27T20:48:13.274+0530 I NETWORK  [conn12] end connection 127.0.0.1:52241 (0 connections now open)
+2017-03-27T20:48:47.311+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52244 #14 (1 connection now open)
+2017-03-27T20:48:47.324+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52245 #15 (2 connections now open)
+2017-03-27T20:48:47.705+0530 I COMMAND  [conn15] command nasa.astronautTotals command: insert { insert: "astronautTotals", ordered: true, writeConcern: { w: "majority" }, documents: 222 } ninserted:222 keyUpdates:0 writeConflicts:0 numYields:0 reslen:40 locks:{ Global: { acquireCount: { r: 5, w: 5 } }, Database: { acquireCount: { w: 4, W: 1 } }, Collection: { acquireCount: { w: 4, W: 1 } } } protocol:op_query 283ms
+2017-03-27T20:48:52.773+0530 I NETWORK  [conn15] end connection 127.0.0.1:52245 (1 connection now open)
+2017-03-27T20:48:52.774+0530 I NETWORK  [conn14] end connection 127.0.0.1:52244 (0 connections now open)
+2017-03-27T20:49:02.646+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52246 #16 (1 connection now open)
+2017-03-27T20:49:07.673+0530 I NETWORK  [conn16] end connection 127.0.0.1:52246 (0 connections now open)
+2017-03-27T20:49:30.143+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52248 #17 (1 connection now open)
+2017-03-27T20:49:30.152+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52249 #18 (2 connections now open)
+2017-03-27T20:49:35.474+0530 I NETWORK  [conn18] end connection 127.0.0.1:52249 (1 connection now open)
+2017-03-27T20:49:35.475+0530 I NETWORK  [conn17] end connection 127.0.0.1:52248 (0 connections now open)
+2017-03-27T20:49:47.654+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52250 #19 (1 connection now open)
+2017-03-27T20:49:47.821+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52251 #20 (2 connections now open)
+2017-03-27T20:49:53.072+0530 I NETWORK  [conn20] end connection 127.0.0.1:52251 (1 connection now open)
+2017-03-27T20:49:53.074+0530 I NETWORK  [conn19] end connection 127.0.0.1:52250 (0 connections now open)
+2017-03-27T20:49:53.717+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52252 #21 (1 connection now open)
+2017-03-27T20:49:53.724+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52253 #22 (2 connections now open)
+2017-03-27T20:49:58.875+0530 I NETWORK  [conn22] end connection 127.0.0.1:52253 (1 connection now open)
+2017-03-27T20:49:58.876+0530 I NETWORK  [conn21] end connection 127.0.0.1:52252 (0 connections now open)
+2017-03-27T20:50:57.860+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52256 #23 (1 connection now open)
+2017-03-27T20:50:57.891+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52257 #24 (2 connections now open)
+2017-03-27T20:51:02.974+0530 I NETWORK  [conn24] end connection 127.0.0.1:52257 (1 connection now open)
+2017-03-27T20:51:02.974+0530 I NETWORK  [conn23] end connection 127.0.0.1:52256 (0 connections now open)
+2017-03-27T20:51:18.169+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52258 #25 (1 connection now open)
+2017-03-27T20:51:18.297+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52259 #26 (2 connections now open)
+2017-03-27T20:51:32.273+0530 I NETWORK  [conn26] end connection 127.0.0.1:52259 (1 connection now open)
+2017-03-27T20:51:32.274+0530 I NETWORK  [conn25] end connection 127.0.0.1:52258 (0 connections now open)
+2017-03-27T20:56:32.712+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:52270 #27 (1 connection now open)
+2017-03-27T20:57:34.085+0530 I NETWORK  [conn27] end connection 127.0.0.1:52270 (0 connections now open)
+
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/Spark
+$

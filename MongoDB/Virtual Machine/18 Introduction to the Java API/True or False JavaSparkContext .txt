@@ -1,0 +1,10 @@
+True or False: The JavaSparkContext is the Java version of the Spark Context and serves the same function
+
+Choose the best answer:
+
+[Single Answer]
+
+True
+False
+
+Answer: True

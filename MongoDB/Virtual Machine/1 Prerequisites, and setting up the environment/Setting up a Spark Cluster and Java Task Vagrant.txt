@@ -1,0 +1,52 @@
+$ vagrant --version
+
+$ cd "E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment\Vagrantfile"
+
+$ vagrant up
+
+$ vagrant ssh
+
+$ java -version
+
+$ ls
+
+# Spark Home
+$ ls spark-1.6.1/
+
+# Spark Binaries
+$ ls spark-1.6.1/bin/
+
+$ ls MongoDB_Spark_Course/
+
+$ ls MongoDB_Spark_Course/build/
+
+$ ls MongoDB_Spark_Course/build/libs/
+
+$ ls MongoDB_Spark_Course/build/libs/
+
+$ jar tvf MongoDB_Spark_Course/build/libs/SparkCourse-1.0.0-SNAPSHOT.jar
+
+$ ls spark-1.6.1/sbin/
+
+$ cat spark-1.6.1/sbin/start-master.sh
+
+$ cat spark-1.6.1/sbin/start-slave.sh
+
+# Start Spark Master from Spark Home Directory
+$ spark-1.6.1/sbin/start-master.sh
+[
+# logs
+$ more
+]
+
+# Start Worker Processes
+$ spark-1.6.1/sbin/start-slave.sh spark://vagrant-ubuntu-trusty-64:7077
+
+# Vagrant will have built spacewalk code into a jar in the build/libs directory
+# Submit the jar to Spark from Spark Home Directory by including the application jar
+$ spark-1.6.1/bin/spark-submit --class spacewalk.SpaceWalk --master spark://vagrant-ubuntu-trusty-64:7077 MongoDB_Spark_Course/build/libs/SparkCourse-1.0.0-SNAPSHOT.jar
+
+# After Writing the RDDs to MongoDB
+[
+$ db.astronautTotals.find().pretty()
+]

@@ -1,0 +1,7 @@
+Run a count of the number of documents in the nasa.eva namespace by running:
+
+$ mongo
+> use nasa
+> db.eva.count()
+
+Answer: 375

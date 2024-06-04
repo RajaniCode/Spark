@@ -1,0 +1,10 @@
+An HDFS deployment can be composed of multiple nodes, each containing a subset of the total data set.
+
+Choose the best answer:
+
+[Single Answer]
+
+True
+False
+
+Answer: True

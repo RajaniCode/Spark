@@ -1,0 +1,10 @@
+True or False: I can process data stored in HDFS and write the results of that processing in MongoDB, or can use MongoDB in place of HDFS
+
+Choose the best answer:
+
+[Single Answer]
+
+True
+False
+
+Answer: True

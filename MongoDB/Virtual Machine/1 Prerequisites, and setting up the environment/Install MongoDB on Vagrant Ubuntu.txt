@@ -1,0 +1,33 @@
+$ vagrant --version
+
+$ cd "E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment\Vagrantfile"
+
+$ vagrant up
+
+$ vagrant ssh
+
+$ ls
+
+$ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+
+$ ls
+
+$ echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+
+$ ls
+
+$ sudo apt-get update
+
+$ ls
+
+$ sudo apt-get install -y mongodb-org
+
+$ ls
+
+$ mongod --version
+
+[$ sudo service mongod start] # [start: Job is already running: mongod]
+
+$ mongo
+> db.version()
+> quit()              

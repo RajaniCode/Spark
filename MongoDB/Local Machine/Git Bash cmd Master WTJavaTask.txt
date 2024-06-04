@@ -1,0 +1,63 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ mongod --version
+db version v3.2.8
+git version: ed70e33130c977bda0024c125b56d159573dbaf0
+OpenSSL version: OpenSSL 1.0.1p-fips 9 Jul 2015
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: 2008plus-ssl
+    distarch: x86_64
+    target_arch: x86_64
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\MongoDB\Spark\spark-1.6.1\bin"
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/Spark/spark-1.6.1/bin
+$ cmd
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+E:\Working\MongoDB\Spark\spark-1.6.1\bin>spark-class org.apache.spark.deploy.master.Master
+spark-class org.apache.spark.deploy.master.Master
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/03/27 21:12:45 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/03/27 21:12:45 INFO SecurityManager: Changing view acls to: Aspire
+17/03/27 21:12:45 INFO SecurityManager: Changing modify acls to: Aspire
+17/03/27 21:12:45 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Aspire); users with modify permissions: Set(Aspire)
+17/03/27 21:12:47 INFO Utils: Successfully started service 'sparkMaster' on port 7077.
+17/03/27 21:12:47 INFO Master: Starting Spark master at spark://192.168.56.1:7077
+17/03/27 21:12:47 INFO Master: Running Spark version 1.6.1
+17/03/27 21:12:48 INFO Utils: Successfully started service 'MasterUI' on port 8080.
+17/03/27 21:12:48 INFO MasterWebUI: Started MasterWebUI at http://192.168.56.1:8080
+17/03/27 21:12:52 INFO Utils: Successfully started service on port 6066.
+17/03/27 21:12:52 INFO StandaloneRestServer: Started REST server for submitting applications on port 6066
+17/03/27 21:12:53 INFO Master: I have been elected leader! New state: ALIVE
+17/03/27 21:14:12 INFO Master: Registering worker 192.168.56.1:52358 with 4 cores, 2.8 GB RAM
+17/03/27 21:40:14 WARN TransportChannelHandler: Exception in connection from Acer/192.168.56.1:52361
+java.io.IOException: An existing connection was forcibly closed by the remote host
+        at sun.nio.ch.SocketDispatcher.read0(Native Method)
+        at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+        at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+        at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+        at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+        at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:313)
+        at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:881)
+        at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:242)
+        at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+        at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:511)
+        at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:468)
+        at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:382)
+        at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:354)
+        at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:111)
+        at java.lang.Thread.run(Thread.java:745)
+17/03/27 21:40:14 INFO Master: Acer:52361 got disassociated, removing it.
+17/03/27 21:40:14 INFO Master: 192.168.56.1:52358 got disassociated, removing it.
+17/03/27 21:40:14 INFO Master: Removing worker worker-20170327211407-192.168.56.1-52358 on 192.168.56.1:52358

@@ -1,0 +1,42 @@
+
+Aspire@Acer MINGW64 ~
+$ java -version
+java version "1.8.0_102"
+Java(TM) SE Runtime Environment (build 1.8.0_102-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.102-b14, mixed mode)
+
+Aspire@Acer MINGW64 ~
+$ mongod --version
+db version v3.2.8
+git version: ed70e33130c977bda0024c125b56d159573dbaf0
+OpenSSL version: OpenSSL 1.0.1p-fips 9 Jul 2015
+allocator: tcmalloc
+modules: none
+build environment:
+    distmod: 2008plus-ssl
+    distarch: x86_64
+    target_arch: x86_64
+
+Aspire@Acer MINGW64 ~
+$ cd "E:\Working\MongoDB\Spark\spark-1.6.1\bin"
+
+Aspire@Acer MINGW64 /e/Working/MongoDB/Spark/spark-1.6.1/bin
+$ cmd
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+E:\Working\MongoDB\Spark\spark-1.6.1\bin>spark-class org.apache.spark.deploy.worker.Worker spark://192.168.56.1:7077
+spark-class org.apache.spark.deploy.worker.Worker spark://192.168.56.1:7077
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/03/27 20:18:29 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/03/27 20:18:29 INFO SecurityManager: Changing view acls to: Aspire
+17/03/27 20:18:29 INFO SecurityManager: Changing modify acls to: Aspire
+17/03/27 20:18:29 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(Aspire); users with modify permissions: Set(Aspire)
+17/03/27 20:18:31 INFO Utils: Successfully started service 'sparkWorker' on port 52052.
+17/03/27 20:18:31 INFO Worker: Starting Spark worker 192.168.56.1:52052 with 4 cores, 2.8 GB RAM
+17/03/27 20:18:31 INFO Worker: Running Spark version 1.6.1
+17/03/27 20:18:31 INFO Worker: Spark home: E:\Working\MongoDB\Spark\spark-1.6.1\bin\..
+17/03/27 20:18:31 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+17/03/27 20:18:31 INFO WorkerWebUI: Started WorkerWebUI at http://192.168.56.1:8081
+17/03/27 20:18:31 INFO Worker: Connecting to master 192.168.56.1:7077...
+17/03/27 20:18:36 INFO Worker: Successfully registered with master spark://192.168.56.1:7077

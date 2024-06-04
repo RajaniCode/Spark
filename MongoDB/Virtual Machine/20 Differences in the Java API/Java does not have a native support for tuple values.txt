@@ -1,0 +1,11 @@
+Java doesn't have a native support for tuple values. You must instead use which class?
+
+Choose the best answer:
+
+[Single Answer]
+
+Threeple
+JavaTuple
+Tuple2
+
+Answer: Tuple2

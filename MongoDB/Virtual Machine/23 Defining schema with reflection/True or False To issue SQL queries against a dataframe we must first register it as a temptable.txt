@@ -1,0 +1,10 @@
+True or False: To issue SQL queries against a dataframe we must first register it as a temptable
+
+Choose the best answer:
+
+[Single Answer]
+
+True
+False
+
+Answer: True

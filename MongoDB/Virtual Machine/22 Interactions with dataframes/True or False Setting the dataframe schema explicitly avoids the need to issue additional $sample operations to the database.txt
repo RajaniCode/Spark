@@ -1,0 +1,10 @@
+True or False: Setting the dataframe's schema explicitly avoids the need to issue additional $sample operations to the database.
+
+Choose the best answer:
+
+[Single Answer]
+
+True
+False
+
+Answer: True

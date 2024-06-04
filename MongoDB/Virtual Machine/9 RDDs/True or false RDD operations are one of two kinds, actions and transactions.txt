@@ -1,0 +1,11 @@
+RDD operations are one of two kinds, actions and transactions
+
+Choose the best answer:
+
+[Single Answer]
+
+True
+False
+
+Answer: False
+Note: Actions and Transformations

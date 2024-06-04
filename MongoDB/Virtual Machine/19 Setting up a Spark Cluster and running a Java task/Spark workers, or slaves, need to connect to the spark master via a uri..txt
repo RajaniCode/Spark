@@ -1,0 +1,11 @@
+Spark workers, or slaves, need to connect to the spark master via a uri. This uri is called the:
+
+Choose the best answer:
+
+[Single Answer]
+
+spark-master uri
+SparkContext uri
+SparkConnection uri
+
+Answer: spark-master uri

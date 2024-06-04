@@ -1,0 +1,33 @@
+$ vagrant --version
+
+$ cd "E:\Working\MongoDB\MongoDB University\2016\M233 Getting Started with Spark and MongoDB\Units\Spark and MongoDB\1 Welcome, prerequisites, and setting up your learning environment\Vagrantfile"
+
+$ vagrant up
+
+$ vagrant ssh
+
+$ ls
+
+$ sudo apt-get update
+
+$ ls
+
+$ sudo apt-get install -y git
+
+$ ls
+
+$ git --version
+
+$ sudo apt-get update
+
+$ ls
+
+$ sudo apt-get install -y sbt
+
+$ ls
+
+$ sbt --version
+
+$ sudo apt-get update
+
+$ ls
